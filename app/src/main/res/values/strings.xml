@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">Doct24_android</string>
+    <string name="app_name">Doct24</string>
+    <string name="home">Главная</string>
+    <string name="doctors">Врачи</string>
+    <string name="meetings">Консультации</string>
+    <string name="profile">Профиль</string>
+    <string name="search">Поиск</string>
+    <string name="howWorks">Как работает Доктор24</string>
+    <string name="askQuestion">Задать вопрос</string>
 </resources>
