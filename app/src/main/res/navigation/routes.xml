@@ -6,22 +6,22 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="ru.princesch.doct24.view.HomeFragment"
+        android:name="com.doct24.doct24_android.view.HomeFragment"
         android:label="HomeFragment"
         tools:layout="@layout/fragment_home"/>
     <fragment
         android:id="@+id/doctorsListFragment"
-        android:name="ru.princesch.doct24.view.DoctorsListFragment"
+        android:name="com.doct24.doct24_android.view.DoctorsListFragment"
         android:label="DoctorsListFragment"
         tools:layout="@layout/fragment_doctors_list"/>
     <fragment
         android:id="@+id/meetingsFragment"
-        android:name="ru.princesch.doct24.view.MeetingsFragment"
+        android:name="com.doct24.doct24_android.view.MeetingsFragment"
         android:label="MeetingsFragment"
         tools:layout="@layout/fragment_meetings"/>
     <fragment
         android:id="@+id/profileFragment"
-        android:name="ru.princesch.doct24.view.ProfileFragment"
+        android:name="com.doct24.doct24_android.view.ProfileFragment"
         android:label="ProfileFragment"
         tools:layout="@layout/fragment_profile"/>
 
