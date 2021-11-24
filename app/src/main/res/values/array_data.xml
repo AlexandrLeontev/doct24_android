@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="patient_data">
+        <item>Аллергии</item>
+        <item>Анализы и прививки</item>
+        <item>Анализы и прививки</item>
+        <item>Хронические заболевания</item>
+        <item>Операции</item>
+    </string-array>
+</resources>
