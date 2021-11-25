@@ -13,6 +13,7 @@ class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
     private lateinit var navController: NavController
+    private lateinit var outlineProvider: MyOutlineProvider
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -21,6 +22,9 @@ class HomeFragment : Fragment() {
     ): View {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         navController = NavHostFragment.findNavController(this)
+        outlineProvider = MyOutlineProvider()
+
+        binding.buttonThermometer.outlineProvider = outlineProvider
         return binding.root
     }
 }
