@@ -19,4 +19,16 @@
     <string name="_180">180см</string>
     <string name="_80">80кг</string>
     <string name="blood">III+</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Allergy">Аллергии</string>
+    <string name="Analysis">Анализы и прививки</string>
+    <string name="Diseases">Хронические заболевания</string>
+    <string name="Surgeries">Операции</string>
+    <string name="References">Справки и больничные листы</string>
+    <string name="PayCard">Платежная карта</string>
+    <string name="Police">Страховой полис</string>
+    <string name="Favorits">Избранное</string>
+    <string name="Subscribe">Подписки</string>
+    <string name="Support">Поддержка</string>
 </resources>
