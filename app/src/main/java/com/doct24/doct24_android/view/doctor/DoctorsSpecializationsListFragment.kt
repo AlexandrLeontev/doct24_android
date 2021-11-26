@@ -7,11 +7,11 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
-import com.doct24.doct24_android.databinding.FragmentDoctorsListBinding
+import com.doct24.doct24_android.databinding.FragmentDoctorsSpecialisationsListBinding
 
 class DoctorsSpecializationsListFragment : Fragment() {
 
-    private var _binding: FragmentDoctorsListBinding? = null
+    private var _binding: FragmentDoctorsSpecialisationsListBinding? = null
     private val binding get() = _binding!!
     private lateinit var navController: NavController
 
@@ -20,7 +20,7 @@ class DoctorsSpecializationsListFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentDoctorsListBinding.inflate(inflater, container, false)
+        _binding = FragmentDoctorsSpecialisationsListBinding.inflate(inflater, container, false)
         navController = NavHostFragment.findNavController(this)
         return binding.root
     }
