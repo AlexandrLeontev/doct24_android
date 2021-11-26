@@ -1,4 +1,4 @@
-package com.doct24.doct24_android.view
+package com.doct24.doct24_android.view.doctor
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,7 +9,7 @@ import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import com.doct24.doct24_android.databinding.FragmentDoctorsListBinding
 
-class DoctorsListFragment : Fragment() {
+class DoctorsSpecializationsListFragment : Fragment() {
 
     private var _binding: FragmentDoctorsListBinding? = null
     private val binding get() = _binding!!
@@ -19,7 +19,7 @@ class DoctorsListFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentDoctorsListBinding.inflate(inflater, container, false)
         navController = NavHostFragment.findNavController(this)
         return binding.root

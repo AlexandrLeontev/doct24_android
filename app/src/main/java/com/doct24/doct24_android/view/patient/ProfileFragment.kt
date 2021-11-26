@@ -12,7 +12,7 @@ import com.doct24.doct24_android.R
 import com.doct24.doct24_android.databinding.FragmentProfileBinding
 
 //@Suppress("UNREACHABLE_CODE")
-class ProfileFragment: Fragment() {
+class ProfileFragment : Fragment() {
 
     private var _binding: FragmentProfileBinding? = null
     private val binding get() = _binding!!
@@ -30,16 +30,16 @@ class ProfileFragment: Fragment() {
 
 
         binding.patientMenu.setOnItemSelectedListener {
-            when(it.itemId){
+            when (it.itemId) {
                 R.id.data -> {
                     Toast.makeText(requireContext(), "000", Toast.LENGTH_SHORT).show()
 //                    adapter.submitList()
                 }
-                R.id.documents ->{
+                R.id.documents -> {
                     Toast.makeText(requireContext(), "111", Toast.LENGTH_SHORT).show()
 
                 }
-                R.id.settings ->{
+                R.id.settings -> {
                     Toast.makeText(requireContext(), "222", Toast.LENGTH_SHORT).show()
                 }
             }

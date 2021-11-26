@@ -15,6 +15,7 @@
         <item name="android:textColor">@color/basicDark</item>
         <item name="fontFamily">@font/rubik</item>
         <item name="materialButtonStyle">@style/notCapsButton</item>
+        <item name="materialCardViewStyle">@style/baseCard</item>
     </style>
 
     <style name="searchTextField" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
@@ -36,5 +37,12 @@
         <item name="android:textSize">13sp</item>
         <item name="android:outlineProvider">bounds</item>
         <item name="android:outlineSpotShadowColor">@color/basicGrey</item>
+    </style>
+
+    <style name="baseCard" parent="Widget.MaterialComponents.CardView">
+        <item name="cardElevation">@dimen/cardMargin</item>
+        <item name="cardCornerRadius">@dimen/defaultPadding</item>
+        <item name="android:outlineSpotShadowColor">@color/basicGrey</item>
+        <item name="android:outlineAmbientShadowColor">@color/white</item>
     </style>
 </resources>
