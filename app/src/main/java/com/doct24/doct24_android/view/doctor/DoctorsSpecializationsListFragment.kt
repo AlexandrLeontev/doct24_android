@@ -14,6 +14,7 @@ class DoctorsSpecializationsListFragment : Fragment() {
     private var _binding: FragmentDoctorsSpecialisationsListBinding? = null
     private val binding get() = _binding!!
     private lateinit var navController: NavController
+    private val adapter = DoctorsSpecializationsListAdapter()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -23,6 +24,15 @@ class DoctorsSpecializationsListFragment : Fragment() {
         _binding = FragmentDoctorsSpecialisationsListBinding.inflate(inflater, container, false)
         navController = NavHostFragment.findNavController(this)
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.recyclerSpec.adapter = adapter
+        adapter.setLocalData()
+        adapter.setOnItemViewClickListener {
+            //переход к списку докторов по категории
+        }
     }
 
 }
