@@ -6,14 +6,22 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.doct24.doct24_android.view.HomeFragment"
+        android:name="com.doct24.doct24_android.view.home.HomeFragment"
         android:label="HomeFragment"
-        tools:layout="@layout/fragment_home"/>
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_doctorProfileFragment"
+            app:destination="@id/doctorProfileFragment" />
+    </fragment>
     <fragment
         android:id="@+id/doctorsListFragment"
-        android:name="com.doct24.doct24_android.view.DoctorsListFragment"
+        android:name="com.doct24.doct24_android.view.doctor.DoctorsSpecializationsListFragment"
         android:label="DoctorsListFragment"
-        tools:layout="@layout/fragment_doctors_list"/>
+        tools:layout="@layout/fragment_doctors_specialisations_list">
+        <action
+            android:id="@+id/action_doctorsListFragment_to_doctorProfileFragment"
+            app:destination="@id/doctorProfileFragment" />
+    </fragment>
     <fragment
         android:id="@+id/meetingsFragment"
         android:name="com.doct24.doct24_android.view.MeetingsFragment"
@@ -24,5 +32,14 @@
         android:name="com.doct24.doct24_android.view.patient.ProfileFragment"
         android:label="ProfileFragment"
         tools:layout="@layout/fragment_profile"/>
+    <fragment
+        android:id="@+id/doctorProfileFragment"
+        android:name="com.doct24.doct24_android.view.doctor.DoctorProfileFragment"
+        android:label="DoctorProfileFragment"
+        tools:layout="@layout/fragment_doctor_profile">
+        <argument
+            android:name="doctor"
+            app:argType="com.doct24.doct24_android.model.Doctor" />
+    </fragment>
 
 </navigation>

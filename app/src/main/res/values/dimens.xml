@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="defaultPadding">16dp</dimen>
+    <dimen name="cardMargin">5dp</dimen>
+    <dimen name="cardImageSize">100dp</dimen>
+    <dimen name="doctorCardSize">150dp</dimen>
 </resources>

@@ -57,37 +57,6 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/icon_notify" />
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/searchInputLayout"
-                style="@style/searchTextField"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:hint="@string/search"
-                android:paddingTop="@dimen/defaultPadding"
-                app:layout_constraintEnd_toStartOf="@+id/imageButtonFilter"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/appBarLogo"
-                app:startIconCheckable="true"
-                app:startIconDrawable="@drawable/icon_search">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="text" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <ImageButton
-                android:id="@+id/imageButtonFilter"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@color/white"
-                android:paddingStart="8dp"
-                android:src="@drawable/button_filter"
-                app:layout_constraintBottom_toBottomOf="@+id/searchInputLayout"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/searchInputLayout" />
-
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </com.google.android.material.appbar.AppBarLayout>

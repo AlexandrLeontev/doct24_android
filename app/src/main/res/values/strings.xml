@@ -7,6 +7,9 @@
     <string name="search">Поиск</string>
     <string name="howWorks">Как работает Доктор24</string>
     <string name="askQuestion">Задать вопрос</string>
+    <string name="medicineControl">Контролируйте прием лекарств</string>
+    <string name="topDoctors">Лучшие врачи</string>
+    <string name="events">Cобытия</string>
     <string name="surname">Фамилия</string>
     <string name="name">Имя</string>
     <string name="patronymic">Отчество</string>

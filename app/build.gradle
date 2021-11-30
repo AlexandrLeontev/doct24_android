@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-android-extensions'
     id("androidx.navigation.safeargs")
 }
 
@@ -10,7 +11,7 @@ android {
 
     defaultConfig {
         applicationId "com.doct24.doct24_android"
-        minSdkVersion 23
+        minSdkVersion 28
         targetSdkVersion 31
         versionCode 1
         versionName "1.0"
