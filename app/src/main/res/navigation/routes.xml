@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.doct24.doct24_android.view.home.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_doctorProfileFragment"
+            app:destination="@id/doctorProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/doctorsListFragment"
+        android:name="com.doct24.doct24_android.view.doctor.DoctorsSpecializationsListFragment"
+        android:label="DoctorsListFragment"
+        tools:layout="@layout/fragment_doctors_specialisations_list">
+        <action
+            android:id="@+id/action_doctorsListFragment_to_doctorProfileFragment"
+            app:destination="@id/doctorProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/meetingsFragment"
+        android:name="com.doct24.doct24_android.view.MeetingsFragment"
+        android:label="MeetingsFragment"
+        tools:layout="@layout/fragment_meetings"/>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.doct24.doct24_android.view.patient.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/fragment_profile"/>
+    <fragment
+        android:id="@+id/doctorProfileFragment"
+        android:name="com.doct24.doct24_android.view.doctor.DoctorProfileFragment"
+        android:label="DoctorProfileFragment"
+        tools:layout="@layout/fragment_doctor_profile">
+        <argument
+            android:name="doctor"
+            app:argType="com.doct24.doct24_android.model.Doctor" />
+    </fragment>
+
+</navigation>

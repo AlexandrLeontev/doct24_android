@@ -1,3 +1,37 @@
 <resources>
-    <string name="app_name">Doct24_android</string>
+    <string name="app_name">Doct24</string>
+    <string name="home">Главная</string>
+    <string name="doctors">Врачи</string>
+    <string name="meetings">Консультации</string>
+    <string name="profile">Профиль</string>
+    <string name="search">Поиск</string>
+    <string name="howWorks">Как работает Доктор24</string>
+    <string name="askQuestion">Задать вопрос</string>
+    <string name="medicineControl">Контролируйте прием лекарств</string>
+    <string name="topDoctors">Лучшие врачи</string>
+    <string name="events">Cобытия</string>
+    <string name="surname">Фамилия</string>
+    <string name="name">Имя</string>
+    <string name="patronymic">Отчество</string>
+    <string name="data">Данные</string>
+    <string name="documents">Документы</string>
+    <string name="settings">Настройки</string>
+    <string name="height">Рост</string>
+    <string name="weight">Вес</string>
+    <string name="blood_type">Группа крови</string>
+    <string name="_180">180см</string>
+    <string name="_80">80кг</string>
+    <string name="blood">III+</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Allergy">Аллергии</string>
+    <string name="Analysis">Анализы и прививки</string>
+    <string name="Diseases">Хронические заболевания</string>
+    <string name="Surgeries">Операции</string>
+    <string name="References">Справки и больничные листы</string>
+    <string name="PayCard">Платежная карта</string>
+    <string name="Police">Страховой полис</string>
+    <string name="Favorits">Избранное</string>
+    <string name="Subscribe">Подписки</string>
+    <string name="Support">Поддержка</string>
 </resources>

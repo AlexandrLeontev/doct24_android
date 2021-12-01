@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="patient_documents">
+        <item>Страховой полис</item>
+        <item>Платежная карта</item>
+        <item>Справки и больничные листы</item>
+    </string-array>
+</resources>
