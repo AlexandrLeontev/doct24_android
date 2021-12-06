@@ -6,6 +6,14 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintBackground"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <fragment
         android:id="@+id/container"
         android:name="androidx.navigation.fragment.NavHostFragment"
@@ -20,17 +28,22 @@
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/mainAppBar"
+        style="@style/baseCard"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white"
+        android:background="@drawable/ic_image_40_background"
         android:padding="@dimen/defaultPadding"
+        android:scrollbarThumbHorizontal="@drawable/ic_image_40_background"
+        android:scrollbarThumbVertical="@drawable/ic_image_40_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:scrollbarThumbHorizontal="@drawable/ic_image_40_background"
+            android:scrollbarThumbVertical="@drawable/ic_image_40_background">
 
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/appBarLogo"

@@ -2,6 +2,9 @@ package com.doct24.doct24_android
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import androidx.core.graphics.drawable.toDrawable
+import androidx.core.view.ViewCompat.setBackground
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.navigation.ui.NavigationUI
@@ -21,4 +24,12 @@ class MainActivity : AppCompatActivity() {
 
         NavigationUI.setupWithNavController(navView, navController)
     }
+
+    fun setImg(patientProfileBkg: Int) {
+       binding.constraintBackground.setBackgroundResource(patientProfileBkg)
+    }
+    fun delImg(){
+        binding.constraintBackground.setBackgroundResource(0)
+    }
+
 }
