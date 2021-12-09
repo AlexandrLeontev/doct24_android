@@ -5,9 +5,9 @@
     <string name="meetings">Консультации</string>
     <string name="profile">Профиль</string>
     <string name="search">Поиск</string>
-    <string name="howWorks">Как работает Доктор24</string>
+    <string name="howWorks">Как работает Doct24</string>
     <string name="askQuestion">Задать вопрос</string>
-    <string name="medicineControl">Контролируйте прием лекарств</string>
+    <string name="medicineControl">Контролируйте прием ваших лекарств</string>
     <string name="topDoctors">Лучшие врачи</string>
     <string name="events">Cобытия</string>
     <string name="surname">Фамилия</string>
@@ -22,8 +22,6 @@
     <string name="_180">180см</string>
     <string name="_80">80кг</string>
     <string name="blood">III+</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="Allergy">Аллергии</string>
     <string name="Analysis">Анализы и прививки</string>
     <string name="Diseases">Хронические заболевания</string>
@@ -34,4 +32,7 @@
     <string name="Favorits">Избранное</string>
     <string name="Subscribe">Подписки</string>
     <string name="Support">Поддержка</string>
+    <string name="medCard">Ведите свою медицинскую карту</string>
+    <string name="healthCheck">Фиксируйте показатели самочувствия</string>
+    <string name="chatWithDoctors">Общайтесь с любимыми врачами</string>
 </resources>

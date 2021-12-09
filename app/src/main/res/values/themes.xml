@@ -20,7 +20,7 @@
 
     <style name="searchTextField" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
         <item name="android:textColorHint">@color/basicGrey</item>
-        <item name="boxBackgroundColor">@color/lightGray</item>
+        <item name="boxBackgroundColor">@color/white</item>
         <item name="boxCornerRadiusTopStart">15dp</item>
         <item name="boxCornerRadiusTopEnd">15dp</item>
         <item name="boxCornerRadiusBottomStart">15dp</item>
