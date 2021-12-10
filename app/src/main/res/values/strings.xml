@@ -35,4 +35,6 @@
     <string name="medCard">Ведите свою медицинскую карту</string>
     <string name="healthCheck">Фиксируйте показатели самочувствия</string>
     <string name="chatWithDoctors">Общайтесь с любимыми врачами</string>
+    <string name="notify">Уведомление</string>
+    <string name="notifyText">Приложение находится в разработке. В ближайшее время здесь появится информация.</string>
 </resources>

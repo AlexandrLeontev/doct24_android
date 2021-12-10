@@ -5,4 +5,6 @@
     <dimen name="cardImageSize">100dp</dimen>
     <dimen name="doctorCardSize">150dp</dimen>
     <dimen name="icMainScreenButtonsSize">50dp</dimen>
+    <dimen name="paddingForPopup">24dp</dimen>
+    <dimen name="iconSizeForPopup">30dp</dimen>
 </resources>

@@ -38,5 +38,31 @@ class HomeFragment : Fragment() {
         }
         binding.mainRecycler.adapter = adapter
         adapter.setLocalData()
+
+        with(binding){
+            buttonConnect.setOnClickListener {
+                showPopUpNotify()
+            }
+            buttonHealthCheck.setOnClickListener {
+                showPopUpNotify()
+            }
+            buttonHeartbeat.setOnClickListener {
+                showPopUpNotify()
+            }
+            buttonMedCard.setOnClickListener {
+                showPopUpNotify()
+            }
+        }
     }
+
+    fun showPopUpNotify(){
+        with(binding){
+            popUpFutureRelease.visibility = View.VISIBLE
+            materialButton.setOnClickListener {
+                popUpFutureRelease.visibility = View.GONE
+            }
+        }
+
+    }
+
 }
