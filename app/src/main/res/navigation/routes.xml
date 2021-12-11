@@ -12,6 +12,12 @@
         <action
             android:id="@+id/action_homeFragment_to_doctorProfileFragment"
             app:destination="@id/doctorProfileFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_howWorksFragment"
+            app:destination="@id/howWorksFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_chatFragment"
+            app:destination="@id/chatFragment" />
     </fragment>
     <fragment
         android:id="@+id/doctorsListFragment"
@@ -41,5 +47,15 @@
             android:name="doctor"
             app:argType="com.doct24.doct24_android.model.Doctor" />
     </fragment>
+    <fragment
+        android:id="@+id/howWorksFragment"
+        android:name="com.doct24.doct24_android.view.home.HowWorksFragment"
+        android:label="HowWorksFragment"
+        tools:layout="@layout/fragment_how_works"/>
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.doct24.doct24_android.view.home.ChatFragment"
+        android:label="ChatFragment"
+        tools:layout="@layout/fragment_chat"/>
 
 </navigation>

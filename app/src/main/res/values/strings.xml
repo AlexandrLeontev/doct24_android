@@ -37,4 +37,27 @@
     <string name="chatWithDoctors">Общайтесь с любимыми врачами</string>
     <string name="notify">Уведомление</string>
     <string name="notifyText">Приложение находится в разработке. В ближайшее время здесь появится информация.</string>
+    <string name="serviceSecureInfo">Подробная информация о безопасности сервиса</string>
+    <string name="howDoct24WorksTitle1">Как работает Doct24</string>
+    <string name="howDoct24WorksTitle2">Что Вы можете с Doct24?</string>
+    <string name="howDoct24WorksText1">Doct24 — это онлайн-консультации 24/7. Квалифицированные врачи всех специальностей проконсультируют Вас по любому интересующему вопросу.
+</string>
+    <string name="howDoct24WorksText2_1">
+        &#8226;️получить консультацию от опытного врача, в нашей команде только лучшие врачи;
+    </string>
+    <string name="howDoct24WorksText2_2">
+        &#8226; обратиться к нам в любое время, без выходных, перерывов и очередей;
+    </string>
+    <string name="howDoct24WorksText2_3">
+        &#8226; связаться с врачом в удобном для Вас формате: в чате или по видеосвязи;
+    </string>
+    <string name="howDoct24WorksText2_4">
+        &#8226; не откладывать консультацию из-за стеснения и неловкости, мы гарантируем полную конфиденциальность Вашего обращения;
+    </string>
+    <string name="howDoct24WorksText2_5">
+        &#8226; быть уверенными в безопасном хранении Вашей медицинской документации;
+    </string>
+    <string name="howDoct24WorksText2_6">
+        &#8226; получить отчет о консультации и все рекомендации в Вашем личном кабинете сразу после завершения приема.
+    </string>
 </resources>

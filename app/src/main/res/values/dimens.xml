@@ -7,4 +7,6 @@
     <dimen name="icMainScreenButtonsSize">50dp</dimen>
     <dimen name="paddingForPopup">24dp</dimen>
     <dimen name="iconSizeForPopup">30dp</dimen>
+    <dimen name="howWorksTitleSize">18sp</dimen>
+    <dimen name="defTextSize">16sp</dimen>
 </resources>

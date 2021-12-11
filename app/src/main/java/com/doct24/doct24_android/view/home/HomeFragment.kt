@@ -10,7 +10,6 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import com.doct24.doct24_android.R
 import com.doct24.doct24_android.databinding.FragmentHomeBinding
-import com.doct24.doct24_android.view.MyOutlineProvider
 import com.doct24.doct24_android.view.doctor.DoctorProfileFragment
 
 class HomeFragment : Fragment() {
@@ -32,14 +31,16 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         adapter.setOnItemViewClickListener { doctor ->
-            findNavController().navigate(R.id.action_homeFragment_to_doctorProfileFragment, Bundle().apply {
-                putParcelable(DoctorProfileFragment.BUNDLE_DOCTOR, doctor)
-            })
+            findNavController().navigate(
+                R.id.action_homeFragment_to_doctorProfileFragment,
+                Bundle().apply {
+                    putParcelable(DoctorProfileFragment.BUNDLE_DOCTOR, doctor)
+                })
         }
         binding.mainRecycler.adapter = adapter
         adapter.setLocalData()
 
-        with(binding){
+        with(binding) {
             buttonConnect.setOnClickListener {
                 showPopUpNotify()
             }
@@ -52,17 +53,28 @@ class HomeFragment : Fragment() {
             buttonMedCard.setOnClickListener {
                 showPopUpNotify()
             }
+            buttonHowWorks.setOnClickListener {
+                findNavController().navigate(R.id.action_homeFragment_to_howWorksFragment)
+            }
+            buttonAsk.setOnClickListener {
+                findNavController().navigate(R.id.action_homeFragment_to_chatFragment)
+            }
         }
     }
 
-    fun showPopUpNotify(){
-        with(binding){
+    private fun showPopUpNotify() {
+        with(binding) {
             popUpFutureRelease.visibility = View.VISIBLE
             materialButton.setOnClickListener {
                 popUpFutureRelease.visibility = View.GONE
             }
         }
 
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 
 }

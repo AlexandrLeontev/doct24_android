@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/fragment_background_how_works"
+    android:orientation="vertical"
+    android:padding="@dimen/defaultPadding"
+    android:layout_marginBottom="?attr/actionBarSize">
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/howWorksBackButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon"
+        app:icon="@drawable/ic_baseline_arrow_back_24"
+        android:elevation="0dp"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/howWorksTitle1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:paddingTop="@dimen/defaultPadding"
+                android:paddingBottom="@dimen/defaultPadding"
+                android:textSize="@dimen/howWorksTitleSize" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/howWorksText1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/howWorksTitle2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:paddingTop="@dimen/defaultPadding"
+                android:paddingBottom="@dimen/defaultPadding"
+                android:textSize="@dimen/howWorksTitleSize" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/howWorksText2_1"
+                android:text="@string/howDoct24WorksText2_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/howWorksText2_2"
+                android:text="@string/howDoct24WorksText2_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/howWorksText2_3"
+                android:text="@string/howDoct24WorksText2_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/howWorksText2_4"
+                android:text="@string/howDoct24WorksText2_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/howWorksText2_5"
+                android:text="@string/howDoct24WorksText2_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/howWorksText2_6"
+                android:text="@string/howDoct24WorksText2_6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/howWorksMoreInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:paddingTop="@dimen/defaultPadding"
+                android:textColor="@color/mainGreen"
+                android:text="@string/serviceSecureInfo"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>
