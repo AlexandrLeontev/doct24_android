@@ -11,6 +11,8 @@ import androidx.navigation.fragment.findNavController
 import com.doct24.doct24_android.R
 import com.doct24.doct24_android.databinding.FragmentHomeBinding
 import com.doct24.doct24_android.view.doctor.DoctorProfileFragment
+import com.doct24.doct24_android.view.hide
+import com.doct24.doct24_android.view.show
 
 class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
@@ -64,9 +66,9 @@ class HomeFragment : Fragment() {
 
     private fun showPopUpNotify() {
         with(binding) {
-            popUpFutureRelease.visibility = View.VISIBLE
+            popUpFutureRelease.show()
             materialButton.setOnClickListener {
-                popUpFutureRelease.visibility = View.GONE
+                popUpFutureRelease.hide()
             }
         }
 

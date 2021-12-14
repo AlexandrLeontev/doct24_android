@@ -35,7 +35,7 @@
         tools:layout="@layout/fragment_meetings"/>
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.doct24.doct24_android.view.patient.PatientProfileFragment"
+        android:name="com.doct24.doct24_android.view.patient.ProfileFragment"
         android:label="ProfileFragment"
         tools:layout="@layout/fragment_profile"/>
     <fragment

@@ -24,12 +24,4 @@ class MainActivity : AppCompatActivity() {
 
         NavigationUI.setupWithNavController(navView, navController)
     }
-
-    fun setImg(patientProfileBkg: Int) {
-       binding.constraintBackground.setBackgroundResource(patientProfileBkg)
-    }
-    fun delImg(){
-        binding.constraintBackground.setBackgroundResource(0)
-    }
-
 }

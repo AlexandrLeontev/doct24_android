@@ -25,16 +25,13 @@ class ProfileFragment: Fragment() {
         _binding = FragmentProfileBinding.inflate(inflater, container, false)
         navController = NavHostFragment.findNavController(this)
 
-
-        (requireActivity() as? MainActivity)?.setImg(R.drawable.patient_profile_bkg)
-
         return binding.root
 
     }
 
     override fun onDestroy() {
         super.onDestroy()
-           (requireActivity() as? MainActivity)?.delImg()
+        _binding = null
 
     }
 

@@ -70,4 +70,7 @@
     <string name="howDoct24WorksText2_6">
         &#8226; получить отчет о консультации и все рекомендации в Вашем личном кабинете сразу после завершения приема.
     </string>
+    <string name="childrenDoctor">Детский врач</string>
+    <string name="adultDoctor">Взрослый врач</string>
+    <string name="familyDoctor">Семейный врач</string>
 </resources>
