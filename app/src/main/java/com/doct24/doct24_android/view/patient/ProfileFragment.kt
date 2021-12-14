@@ -11,7 +11,7 @@ import com.doct24.doct24_android.MainActivity
 import com.doct24.doct24_android.R
 import com.doct24.doct24_android.databinding.FragmentProfileBinding
 
-class PatientProfileFragment: Fragment() {
+class ProfileFragment: Fragment() {
 
     private var _binding: FragmentProfileBinding? = null
     private val binding get() = _binding!!
