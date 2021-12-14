@@ -1,4 +1,4 @@
-package com.doct24.doct24_android.model.localrepo
+package com.doct24.doct24_android.model
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
