@@ -3,19 +3,39 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:layout_marginBottom="?attr/actionBarSize">
 
 
+    <Space
+        android:id="@+id/space3"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/patient_profile_bkg"
+        app:layout_constraintBottom_toBottomOf="@+id/cardName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/space3">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <LinearLayout
         android:id="@+id/layout2"
         android:layout_width="0dp"
-        android:layout_height="40dp"
+        android:layout_height="80dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/cardView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/space3" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView2"
@@ -23,6 +43,7 @@
         android:layout_height="120dp"
         android:layout_margin="5dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="64dp"
         app:cardCornerRadius="60dp"
         app:cardElevation="0dp"
         app:cardUseCompatPadding="true"
@@ -44,11 +65,10 @@
         android:id="@+id/cardName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
+        android:layout_marginStart="54dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/ripple_effect"
-        android:onClick="@string/Allergy"
         android:orientation="horizontal"
         android:outlineAmbientShadowColor="@android:color/transparent"
 
@@ -95,6 +115,13 @@
                         android:textColor="@color/color_name"
                         android:textSize="20sp"
                         android:textStyle="bold" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:background="@drawable/patient_profile_bkg">
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
                 </LinearLayout>
@@ -231,7 +258,7 @@
         app:cardCornerRadius="10dp"
         app:layout_constraintHorizontal_weight="5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvHeigh">>
+        app:layout_constraintTop_toBottomOf="@+id/tvHeigh">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -281,7 +308,7 @@
         app:cardCornerRadius="10dp"
         app:layout_constraintHorizontal_weight="2"
         app:layout_constraintStart_toEndOf="@+id/cardHeght"
-        app:layout_constraintTop_toBottomOf="@+id/tvWaight">>
+        app:layout_constraintTop_toBottomOf="@+id/tvWaight">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -323,7 +350,7 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardBlood"
-        android:layout_width="wrap_content"
+        android:layout_width="92dp"
         android:layout_height="wrap_content"
         android:layout_margin="6dp"
         android:layout_marginStart="16dp"
@@ -331,7 +358,7 @@
         app:cardCornerRadius="10dp"
         app:layout_constraintHorizontal_weight="2"
         app:layout_constraintStart_toEndOf="@+id/cardWaight"
-        app:layout_constraintTop_toBottomOf="@+id/tvBloodType">>
+        app:layout_constraintTop_toBottomOf="@+id/tvBloodType">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -358,6 +385,7 @@
     </androidx.cardview.widget.CardView>
 
     <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="16dp"
@@ -388,9 +416,8 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
-                android:onClick="@string/Allergy"
-                android:orientation="horizontal"
                 android:background="@drawable/ripple_effect"
+                android:orientation="horizontal"
                 app:cardCornerRadius="10dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -402,8 +429,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="31dp"
                     android:layout_margin="3dp"
-                    android:gravity="center_vertical"
                     android:background="@drawable/ripple_effect"
+                    android:gravity="center_vertical"
                     android:orientation="horizontal">
 
                     <TextView
@@ -425,15 +452,15 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cardAnalysis"
+                android:id="@+id/cardSurgeries"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
-                android:orientation="horizontal"
                 android:background="@drawable/ripple_effect"
+                android:orientation="horizontal"
                 app:cardCornerRadius="10dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -445,17 +472,60 @@
                     android:layout_width="match_parent"
                     android:layout_height="31dp"
                     android:layout_margin="3dp"
+                    android:background="@drawable/ripple_effect"
                     android:gravity="center_vertical"
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/tvAnalysis"
+                        android:id="@+id/tvSurgeries"
                         android:layout_width="325dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="5dp"
                         android:layout_weight="1"
                         android:gravity="center_vertical"
                         android:text="@string/Surgeries" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/ic_arrow" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardMeds"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/ripple_effect"
+                android:orientation="horizontal"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="31dp"
+                    android:layout_margin="3dp"
+                    android:background="@drawable/ripple_effect"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvMeds"
+                        android:layout_width="325dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="@string/Medicament" />
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -473,8 +543,8 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
-                android:orientation="horizontal"
                 android:background="@drawable/ripple_effect"
+                android:orientation="horizontal"
                 app:cardCornerRadius="10dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -486,52 +556,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="31dp"
                     android:layout_margin="3dp"
+                    android:background="@drawable/ripple_effect"
                     android:gravity="center_vertical"
                     android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/tvDiseases"
-                        android:layout_width="325dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="5dp"
-                        android:layout_weight="1"
-                        android:gravity="center_vertical"
-                        android:text="@string/Medicament" />
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        app:srcCompat="@drawable/ic_arrow" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cardSurgeries"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginBottom="8dp"
-                android:orientation="horizontal"
-                android:background="@drawable/ripple_effect"
-                app:cardCornerRadius="10dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="31dp"
-                    android:layout_margin="3dp"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/tvSurgeries"
                         android:layout_width="325dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="5dp"
@@ -564,8 +594,8 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
-                android:orientation="horizontal"
                 android:background="@drawable/ripple_effect"
+                android:orientation="horizontal"
                 app:cardCornerRadius="10dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -605,8 +635,8 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
-                android:orientation="horizontal"
                 android:background="@drawable/ripple_effect"
+                android:orientation="horizontal"
                 app:cardCornerRadius="10dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -639,6 +669,62 @@
             </androidx.cardview.widget.CardView>
         </LinearLayout>
     </ScrollView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/popUpFutureRelease"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/paddingForPopup">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/materialButton"
+                style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="0dp"
+                app:icon="@drawable/ic_baseline_check_24"
+                app:iconGravity="end"
+                app:iconSize="@dimen/iconSizeForPopup"
+                app:iconTint="@color/secondaryYellow"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/materialTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/notify"
+                android:textColor="@color/headlineColor"
+                android:textSize="28sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/materialButton" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/notifyText"
+                android:textSize="16sp"
+                android:paddingBottom="@dimen/paddingForPopup"
+                android:paddingTop="@dimen/defaultPadding"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/materialTextView" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
