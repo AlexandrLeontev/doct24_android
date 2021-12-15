@@ -10,8 +10,9 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import com.doct24.doct24_android.R
 import com.doct24.doct24_android.databinding.FragmentHomeBinding
-import com.doct24.doct24_android.view.MyOutlineProvider
 import com.doct24.doct24_android.view.doctor.DoctorProfileFragment
+import com.doct24.doct24_android.view.hide
+import com.doct24.doct24_android.view.show
 
 class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
@@ -32,11 +33,50 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         adapter.setOnItemViewClickListener { doctor ->
-            findNavController().navigate(R.id.action_homeFragment_to_doctorProfileFragment, Bundle().apply {
-                putParcelable(DoctorProfileFragment.BUNDLE_DOCTOR, doctor)
-            })
+            findNavController().navigate(
+                R.id.action_homeFragment_to_doctorProfileFragment,
+                Bundle().apply {
+                    putParcelable(DoctorProfileFragment.BUNDLE_DOCTOR, doctor)
+                })
         }
         binding.mainRecycler.adapter = adapter
         adapter.setLocalData()
+
+        with(binding) {
+            buttonConnect.setOnClickListener {
+                showPopUpNotify()
+            }
+            buttonHealthCheck.setOnClickListener {
+                showPopUpNotify()
+            }
+            buttonHeartbeat.setOnClickListener {
+                showPopUpNotify()
+            }
+            buttonMedCard.setOnClickListener {
+                showPopUpNotify()
+            }
+            buttonHowWorks.setOnClickListener {
+                findNavController().navigate(R.id.action_homeFragment_to_howWorksFragment)
+            }
+            buttonAsk.setOnClickListener {
+                findNavController().navigate(R.id.action_homeFragment_to_chatFragment)
+            }
+        }
     }
+
+    private fun showPopUpNotify() {
+        with(binding) {
+            popUpFutureRelease.show()
+            materialButton.setOnClickListener {
+                popUpFutureRelease.hide()
+            }
+        }
+
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+
 }

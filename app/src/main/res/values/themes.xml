@@ -14,11 +14,14 @@
         <!-- Customize your theme here. -->
         <item name="android:textColor">@color/basicDark</item>
         <item name="fontFamily">@font/rubik</item>
+        <item name="materialButtonStyle">@style/notCapsButton</item>
+        <item name="materialCardViewStyle">@style/baseCard</item>
+        <item name="android:textSize">@dimen/defTextSize</item>
     </style>
 
     <style name="searchTextField" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
         <item name="android:textColorHint">@color/basicGrey</item>
-        <item name="boxBackgroundColor">@color/lightGray</item>
+        <item name="boxBackgroundColor">@color/white</item>
         <item name="boxCornerRadiusTopStart">15dp</item>
         <item name="boxCornerRadiusTopEnd">15dp</item>
         <item name="boxCornerRadiusBottomStart">15dp</item>

@@ -8,4 +8,9 @@ class DoctorProfileFragment : Fragment() {
         const val BUNDLE_DOCTOR = "doctor"
     }
 
+//    override fun onDestroyView() {
+//        super.onDestroyView()
+//        _binding = null
+//    }
+
 }

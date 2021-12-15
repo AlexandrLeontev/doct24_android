@@ -2,6 +2,9 @@ package com.doct24.doct24_android
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import androidx.core.graphics.drawable.toDrawable
+import androidx.core.view.ViewCompat.setBackground
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.navigation.ui.NavigationUI

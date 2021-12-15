@@ -77,7 +77,7 @@ class LocalDoctorsRepository {
             "Джонс",
             "https://www.melomed.co.za/images/stunning2.jpg",
             26,
-            "Врач спортивной медицины",
+            "Анестезиолог",
             "Англия",
             "Лондон",
             "+79999999915",

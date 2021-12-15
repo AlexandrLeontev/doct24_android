@@ -4,7 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/secondaryBlue"
+    android:layout_marginBottom="?attr/actionBarSize"
     android:padding="@dimen/defaultPadding">
+
+    <Space
+        android:id="@+id/space2"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/searchInputLayout"
@@ -12,9 +22,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="@string/search"
-        app:layout_constraintEnd_toStartOf="@+id/imageButtonFilter"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/space2"
         app:startIconCheckable="true"
         app:startIconDrawable="@drawable/icon_search">
 
@@ -25,16 +35,6 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <ImageButton
-        android:id="@+id/imageButtonFilter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
-        android:paddingStart="8dp"
-        android:src="@drawable/button_filter"
-        app:layout_constraintBottom_toBottomOf="@+id/searchInputLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/searchInputLayout" />
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -42,7 +42,9 @@
         android:layout_marginTop="@dimen/defaultPadding"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/searchInputLayout">
+        app:layout_constraintTop_toBottomOf="@+id/searchInputLayout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:foregroundGravity="top">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -58,28 +60,28 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/defaultPadding"
                     android:layout_gravity="center">
 
                     <ImageView
+                        android:id="@+id/imgButtonHow"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_button_question"
+                        android:src="@drawable/ic_button_how"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <com.google.android.material.textview.MaterialTextView
-                        android:layout_width="match_parent"
+                        android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:gravity="center"
                         android:text="@string/howWorks"
                         android:textSize="16sp"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/imgButtonHow"
                         app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -95,26 +97,27 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/defaultPadding"
                     android:layout_gravity="center">
 
                     <ImageView
+                        android:id="@+id/imageView2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/ic_button_question"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <com.google.android.material.textview.MaterialTextView
-                        android:layout_width="match_parent"
+                        android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:text="@string/askQuestion"
                         android:textSize="16sp"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/imageView2"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -129,6 +132,7 @@
                 android:paddingTop="28dp"
                 android:text="@string/topDoctors"
                 android:textSize="28sp"
+                android:textColor="@color/headlineColor"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/buttonHowWorks" />
@@ -139,85 +143,90 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                app:layout_constraintBottom_toTopOf="@id/materialTextView2"
+                app:layout_constraintBottom_toTopOf="@id/buttonMedCard"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/materialTextView1"
                 tools:listitem="@layout/item_home_doctor" />
 
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/materialTextView2"
+            <Space
+                android:id="@+id/space1"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:paddingTop="28dp"
-                android:text="@string/events"
-                android:textSize="28sp"
+                android:layout_height="@dimen/defaultPadding"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/mainRecycler" />
+                app:layout_constraintTop_toBottomOf="@id/mainRecycler"/>
 
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/buttonMedicine"
+                android:id="@+id/buttonMedCard"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/cardMargin"
-                app:layout_constraintEnd_toStartOf="@id/buttonThermometer"
+                app:layout_constraintEnd_toStartOf="@id/buttonHealthCheck"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/materialTextView2">
+                app:layout_constraintTop_toBottomOf="@id/space1">
 
-                <LinearLayout
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="@dimen/defaultPadding">
+                    android:layout_height="match_parent"
+                    android:gravity="center">
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="@dimen/cardMargin"
-                        android:src="@drawable/ic_medicine" />
+                        android:layout_width="@dimen/icMainScreenButtonsSize"
+                        android:layout_height="@dimen/icMainScreenButtonsSize"
+                        android:src="@drawable/ic_medcard"
+
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
 
                     <com.google.android.material.textview.MaterialTextView
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="@string/medicineControl" />
+                        android:gravity="start"
+                        android:padding="@dimen/defaultPadding"
+                        android:text="@string/medCard"
+                        android:textSize="14sp"
+                        android:paddingEnd="@dimen/icMainScreenButtonsSize"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/buttonThermometer"
+                android:id="@+id/buttonHealthCheck"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/cardMargin"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/buttonMedicine"
-                app:layout_constraintTop_toBottomOf="@+id/materialTextView2">
+                app:layout_constraintStart_toEndOf="@+id/buttonMedCard"
+                app:layout_constraintTop_toBottomOf="@id/space1">
 
-                <LinearLayout
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="@dimen/defaultPadding">
+                    android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="@dimen/cardMargin"
-                        android:src="@drawable/ic_thermometer" />
+                        android:layout_width="@dimen/icMainScreenButtonsSize"
+                        android:layout_height="@dimen/icMainScreenButtonsSize"
+                        android:src="@drawable/ic_health"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
 
                     <com.google.android.material.textview.MaterialTextView
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="Отслеживайте показатели здоровья" />
+                        android:gravity="start"
+                        android:padding="@dimen/defaultPadding"
+                        android:text="@string/healthCheck"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
             </com.google.android.material.card.MaterialCardView>
 
@@ -228,28 +237,32 @@
                 android:layout_margin="@dimen/cardMargin"
                 app:layout_constraintEnd_toStartOf="@id/buttonConnect"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/buttonMedicine">
+                app:layout_constraintTop_toBottomOf="@id/buttonMedCard">
 
-                <LinearLayout
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="@dimen/defaultPadding">
+                    android:layout_height="match_parent"
+                    android:gravity="center">
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="@dimen/cardMargin"
-                        android:src="@drawable/ic_heartbeat" />
+                        android:layout_width="@dimen/icMainScreenButtonsSize"
+                        android:layout_height="@dimen/icMainScreenButtonsSize"
+                        android:src="@drawable/ic_medicine"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
 
                     <com.google.android.material.textview.MaterialTextView
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="Добавляйте медицинские данные" />
+                        android:gravity="start"
+                        android:padding="@dimen/defaultPadding"
+                        android:text="@string/medicineControl"
+                        android:textSize="14sp"
+                        android:paddingEnd="@dimen/icMainScreenButtonsSize"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
             </com.google.android.material.card.MaterialCardView>
 
@@ -260,40 +273,93 @@
                 android:layout_margin="@dimen/cardMargin"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/buttonHeartbeat"
-                app:layout_constraintTop_toBottomOf="@id/buttonThermometer">
+                app:layout_constraintTop_toBottomOf="@id/buttonHealthCheck">
 
-                <LinearLayout
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="@dimen/defaultPadding">
+                    android:layout_height="match_parent"
+                    android:gravity="center">
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="@dimen/cardMargin"
-                        android:src="@drawable/ic_connection" />
+                        android:layout_width="@dimen/icMainScreenButtonsSize"
+                        android:layout_height="@dimen/icMainScreenButtonsSize"
+                        android:src="@drawable/ic_doctor_chat"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
 
                     <com.google.android.material.textview.MaterialTextView
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="Поддерживайте связь с врачом" />
+                        android:gravity="start"
+                        android:padding="@dimen/defaultPadding"
+                        android:text="@string/chatWithDoctors"
+                        android:textSize="14sp"
+                        android:paddingEnd="@dimen/icMainScreenButtonsSize"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
             </com.google.android.material.card.MaterialCardView>
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/buttonHeartbeat"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/popUpFutureRelease"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/paddingForPopup">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/materialButton"
+                style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="0dp"
+                app:icon="@drawable/ic_baseline_check_24"
+                app:iconGravity="end"
+                app:iconSize="@dimen/iconSizeForPopup"
+                app:iconTint="@color/secondaryYellow"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/materialTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/notify"
+                android:textColor="@color/headlineColor"
+                android:textSize="28sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/materialButton" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/notifyText"
+                android:textSize="16sp"
+                android:paddingBottom="@dimen/paddingForPopup"
+                android:paddingTop="@dimen/defaultPadding"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/materialTextView" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

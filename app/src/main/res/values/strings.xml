@@ -5,9 +5,9 @@
     <string name="meetings">Консультации</string>
     <string name="profile">Профиль</string>
     <string name="search">Поиск</string>
-    <string name="howWorks">Как работает Доктор24</string>
+    <string name="howWorks">Как работает Doct24</string>
     <string name="askQuestion">Задать вопрос</string>
-    <string name="medicineControl">Контролируйте прием лекарств</string>
+    <string name="medicineControl">Контролируйте прием ваших лекарств</string>
     <string name="topDoctors">Лучшие врачи</string>
     <string name="events">Cобытия</string>
     <string name="surname">Фамилия</string>
@@ -19,19 +19,58 @@
     <string name="height">Рост</string>
     <string name="weight">Вес</string>
     <string name="blood_type">Группа крови</string>
-    <string name="_180">180см</string>
-    <string name="_80">80кг</string>
+    <string name="_180">180</string>
+    <string name="_80">80</string>
     <string name="blood">III+</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="Allergy">Аллергии</string>
     <string name="Analysis">Анализы и прививки</string>
     <string name="Diseases">Хронические заболевания</string>
-    <string name="Surgeries">Операции</string>
+    <string name="Surgeries">Перенесенные операции</string>
+    <string name="Medicament">Прием препаратов</string>
+    <string name="BankCards">Банковские карты</string>
     <string name="References">Справки и больничные листы</string>
     <string name="PayCard">Платежная карта</string>
     <string name="Police">Страховой полис</string>
     <string name="Favorits">Избранное</string>
+    <string name="FavoritDocs">Избранные врачи</string>
     <string name="Subscribe">Подписки</string>
     <string name="Support">Поддержка</string>
+    <string name="man">Мужчина</string>
+    <string name="years">лет</string>
+    <string name="e_mail">E-mail:</string>
+    <string name="abc_mail_ru">ABC@mail.ru</string>
+    <string name="tel">Тел.:</string>
+    <string name="_7_775_222_22_22">+7(775)222 22 22</string>
+    <string name="medCard">Ведите свою медицинскую карту</string>
+    <string name="healthCheck">Фиксируйте показатели самочувствия</string>
+    <string name="chatWithDoctors">Общайтесь с любимыми врачами</string>
+    <string name="notify">Уведомление</string>
+    <string name="notifyText">Приложение находится в разработке. В ближайшее время здесь появится информация.</string>
+    <string name="serviceSecureInfo">Подробная информация о безопасности сервиса</string>
+    <string name="howDoct24WorksTitle1">Как работает Doct24</string>
+    <string name="howDoct24WorksTitle2">Что Вы можете с Doct24?</string>
+    <string name="howDoct24WorksText1">Doct24 — это онлайн-консультации 24/7. Квалифицированные врачи всех специальностей проконсультируют Вас по любому интересующему вопросу.
+</string>
+    <string name="howDoct24WorksText2_1">
+        &#8226;️получить консультацию от опытного врача, в нашей команде только лучшие врачи;
+    </string>
+    <string name="howDoct24WorksText2_2">
+        &#8226; обратиться к нам в любое время, без выходных, перерывов и очередей;
+    </string>
+    <string name="howDoct24WorksText2_3">
+        &#8226; связаться с врачом в удобном для Вас формате: в чате или по видеосвязи;
+    </string>
+    <string name="howDoct24WorksText2_4">
+        &#8226; не откладывать консультацию из-за стеснения и неловкости, мы гарантируем полную конфиденциальность Вашего обращения;
+    </string>
+    <string name="howDoct24WorksText2_5">
+        &#8226; быть уверенными в безопасном хранении Вашей медицинской документации;
+    </string>
+    <string name="howDoct24WorksText2_6">
+        &#8226; получить отчет о консультации и все рекомендации в Вашем личном кабинете сразу после завершения приема.
+    </string>
+    <string name="childrenDoctor">Детский врач</string>
+    <string name="adultDoctor">Взрослый врач</string>
+    <string name="familyDoctor">Семейный врач</string>
 </resources>
