@@ -33,11 +33,19 @@
         android:name="com.doct24.doct24_android.view.MeetingsFragment"
         android:label="MeetingsFragment"
         tools:layout="@layout/fragment_meetings"/>
+
+
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.doct24.doct24_android.view.patient.ProfileFragment"
         android:label="ProfileFragment"
-        tools:layout="@layout/fragment_profile"/>
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profileFragment_to_patientDataFragment"
+            app:destination="@id/PatientDataFragment" />
+    </fragment>
+
+
     <fragment
         android:id="@+id/doctorProfileFragment"
         android:name="com.doct24.doct24_android.view.doctor.DoctorProfileFragment"
@@ -47,7 +55,9 @@
             android:name="doctor"
             app:argType="com.doct24.doct24_android.model.Doctor" />
     </fragment>
-    <fragment
+
+
+        <fragment
         android:id="@+id/howWorksFragment"
         android:name="com.doct24.doct24_android.view.home.HowWorksFragment"
         android:label="HowWorksFragment"
@@ -57,5 +67,11 @@
         android:name="com.doct24.doct24_android.view.home.ChatFragment"
         android:label="ChatFragment"
         tools:layout="@layout/fragment_chat"/>
+
+    <fragment
+        android:id="@+id/PatientDataFragment"
+        android:name="com.doct24.doct24_android.view.patient.dataFragements.PatientDataFragment"
+        android:label="PatientDataFragment"
+        tools:layout="@layout/patient_data_fragment"/>
 
 </navigation>

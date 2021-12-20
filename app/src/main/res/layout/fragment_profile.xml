@@ -174,7 +174,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="6dp"
-                    android:text="35"
+                    android:text="@string/Space"
                     android:textColor="@color/black"
                     android:textSize="16sp" />
 
@@ -278,14 +278,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="6dp"
-                android:text="@string/_180" />
+                android:text="@string/Space" />
 
             <TextView
                 android:id="@+id/textView6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="6dp"
-                android:text="см" />
+                android:text="@string/sm" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
@@ -328,7 +328,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="6dp"
-                android:text="@string/_80" />
+                android:text="@string/Space" />
 
             <TextView
                 android:id="@+id/tvKg"
@@ -379,7 +379,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="6dp"
                 android:gravity="center"
-                android:text="III+" />
+                android:text="@string/Space" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
@@ -404,7 +404,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="6dp"
-                android:text="Медицинские данные"
+                android:text="@string/Med_datas"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -582,7 +582,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="6dp"
-                android:text="Дополнительно"
+                android:text="@string/Extra"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -678,7 +678,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="wrap_content"
@@ -714,10 +714,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
+                android:paddingTop="@dimen/defaultPadding"
+                android:paddingBottom="@dimen/paddingForPopup"
                 android:text="@string/notifyText"
                 android:textSize="16sp"
-                android:paddingBottom="@dimen/paddingForPopup"
-                android:paddingTop="@dimen/defaultPadding"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/materialTextView" />

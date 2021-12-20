@@ -73,4 +73,11 @@
     <string name="childrenDoctor">Детский врач</string>
     <string name="adultDoctor">Взрослый врач</string>
     <string name="familyDoctor">Семейный врач</string>
+    <string name="sex">Пол</string>
+    <string name="phone">Телефон:</string>
+    <string name="save">Сохранить</string>
+    <string name="Space">__</string>
+    <string name="sm">см</string>
+    <string name="Med_datas">Медицинские данные</string>
+    <string name="Extra">Дополнительно</string>
 </resources>
