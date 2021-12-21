@@ -20,13 +20,13 @@
             app:destination="@id/chatFragment" />
     </fragment>
     <fragment
-        android:id="@+id/doctorsListFragment"
+        android:id="@+id/doctorsSpecListFragment"
         android:name="com.doct24.doct24_android.view.doctor.DoctorsSpecializationsListFragment"
         android:label="DoctorsListFragment"
         tools:layout="@layout/fragment_doctors_specialisations_list">
         <action
-            android:id="@+id/action_doctorsListFragment_to_doctorProfileFragment"
-            app:destination="@id/doctorProfileFragment" />
+            android:id="@+id/action_doctorsListFragment_to_doctorListFragment"
+            app:destination="@id/doctorListFragment" />
     </fragment>
     <fragment
         android:id="@+id/meetingsFragment"
@@ -67,6 +67,18 @@
         android:name="com.doct24.doct24_android.view.home.ChatFragment"
         android:label="ChatFragment"
         tools:layout="@layout/fragment_chat"/>
+    <fragment
+        android:id="@+id/doctorListFragment"
+        android:name="com.doct24.doct24_android.view.doctor.DoctorListFragment"
+        android:label="DoctorListFragment"
+        tools:layout="@layout/fragment_doctors_list">
+        <action
+            android:id="@+id/action_doctorListFragment_to_doctorProfileFragment"
+            app:destination="@id/doctorProfileFragment" />
+        <argument
+            android:name="specialization"
+            app:argType="com.doct24.doct24_android.model.Specialization" />
+    </fragment>
 
     <fragment
         android:id="@+id/PatientDataFragment"
