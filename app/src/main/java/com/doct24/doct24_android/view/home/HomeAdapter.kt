@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.doct24.doct24_android.databinding.ItemHomeDoctorBinding
 import com.doct24.doct24_android.model.Doctor
+import com.doct24.doct24_android.model.Specialization
 import com.doct24.doct24_android.model.localrepo.LocalDoctorsRepository
 import com.squareup.picasso.Picasso
 
@@ -34,8 +35,8 @@ class HomeAdapter : RecyclerView.Adapter<HomeAdapter.HomeViewHolder>() {
         this.onItemViewClickListener = onItemViewClickListener
     }
 
-    fun setLocalData(){
-        doctorsList = LocalDoctorsRepository().getDoctorsList()
+    fun setData(){
+        doctorsList = LocalDoctorsRepository().getDoctorsList(Specialization(0, "best"))
         notifyDataSetChanged()
     }
 

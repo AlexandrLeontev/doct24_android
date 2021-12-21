@@ -40,7 +40,7 @@ class HomeFragment : Fragment() {
                 })
         }
         binding.mainRecycler.adapter = adapter
-        adapter.setLocalData()
+        adapter.setData()
 
         with(binding) {
             buttonConnect.setOnClickListener {
