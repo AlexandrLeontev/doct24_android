@@ -72,6 +72,6 @@
         android:id="@+id/PatientDataFragment"
         android:name="com.doct24.doct24_android.view.patient.dataFragements.PatientDataFragment"
         android:label="PatientDataFragment"
-        tools:layout="@layout/patient_data_fragment"/>
+        tools:layout="@layout/fragment_patient_data"/>
 
 </navigation>

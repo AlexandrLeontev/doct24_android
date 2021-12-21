@@ -80,4 +80,5 @@
     <string name="sm">см</string>
     <string name="Med_datas">Медицинские данные</string>
     <string name="Extra">Дополнительно</string>
+    <string name="EnterDatas">Заполните данные</string>
 </resources>
