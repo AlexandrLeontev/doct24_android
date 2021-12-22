@@ -13,7 +13,6 @@ import com.doct24.doct24_android.databinding.FragmentPatientDataBinding
 
 class PatientDataFragment : Fragment() {
 
-//    private lateinit var viewModel: PatientDataViewModel
     private var _binding: FragmentPatientDataBinding? = null
     private val binding get() = _binding!!
     private lateinit var navController: NavController
@@ -35,11 +34,6 @@ class PatientDataFragment : Fragment() {
         }
     }
 
-//    override fun onActivityCreated(savedInstanceState: Bundle?) {
-//        super.onActivityCreated(savedInstanceState)
-//        viewModel = ViewModelProvider(this).get(PatientDataViewModel::class.java)
-//        // TODO: Use the ViewModel
-//    }
 
     override fun onDestroyView() {
         super.onDestroyView()
