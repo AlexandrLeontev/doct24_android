@@ -51,7 +51,7 @@
         android:id="@+id/scrolData"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/cardAllerg"
+        app:layout_constraintBottom_toTopOf="@+id/cardSave"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/space">
@@ -189,7 +189,7 @@
                         android:layout_marginStart="5dp"
                         android:layout_weight="1"
                         android:gravity="center_vertical"
-                        android:text="@string/name" />
+                        android:text="@string/patronymic" />
 
                     <ImageView
                         android:layout_width="40dp"
@@ -319,21 +319,38 @@
                     android:gravity="center_vertical"
                     android:orientation="horizontal">
 
-                    <EditText
-                        android:id="@+id/etPatientEmail"
+                    <com.google.android.material.textfield.TextInputLayout
+
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:id="@+id/emailContainer"
+                        app:helperTextTextColor="@color/design_default_color_error"
                         android:layout_marginStart="5dp"
                         android:layout_weight="1"
-                        android:ems="10"
-                        android:gravity="center_vertical"
-                        android:text="@string/abc_mail_ru" />
+                        android:ems="20"
+                        android:gravity="center_vertical">
+
+                        <EditText
+                            android:id="@+id/etPatientEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:backgroundTint="@android:color/transparent"
+                            android:hint="@string/e_mail"
+                            android:inputType="textEmailAddress"
+                            android:imeOptions="actionDone"
+                            android:lines="1" />
+
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
 
                     <ImageView
                         android:layout_width="40dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         app:srcCompat="@drawable/edit" />
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 

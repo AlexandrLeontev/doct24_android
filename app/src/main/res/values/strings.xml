@@ -77,8 +77,10 @@
     <string name="phone">Телефон:</string>
     <string name="save">Сохранить</string>
     <string name="Space">__</string>
+    <string name="DobleSpace">____</string>
     <string name="sm">см</string>
     <string name="Med_datas">Медицинские данные</string>
     <string name="Extra">Дополнительно</string>
     <string name="EnterDatas">Заполните данные</string>
+    <string name="required">Required</string>
 </resources>
