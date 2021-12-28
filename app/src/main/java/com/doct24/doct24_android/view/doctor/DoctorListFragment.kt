@@ -7,10 +7,12 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.findNavController
+import com.doct24.doct24_android.R
 import com.doct24.doct24_android.databinding.FragmentDoctorsListBinding
 import com.doct24.doct24_android.model.Specialization
 
-class DoctorListFragment : Fragment () {
+class DoctorListFragment : Fragment() {
 
     companion object {
         const val SPEC_BUNDLE = "spec"
@@ -35,12 +37,14 @@ class DoctorListFragment : Fragment () {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         specialization = arguments?.getParcelable(SPEC_BUNDLE) ?: Specialization(0, "")
-        with(binding){
+        with(binding) {
             doctorListTitle.text = specialization.title
             recyclerDoctorsList.adapter = adapter
             adapter.setData(specialization)
             adapter.setOnItemViewClickListener {
-                //TODO to doctor profile
+                findNavController().navigate(R.id.action_doctorListFragment_to_doctorProfileFragment,
+                    Bundle().apply
+                    { putParcelable(DoctorProfileFragment.BUNDLE_DOCTOR, it) })
             }
         }
     }

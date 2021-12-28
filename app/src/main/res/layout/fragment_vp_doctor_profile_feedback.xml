@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatRatingBar
+        android:id="@+id/doctorProfileRatingBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        style="@style/MyRatingBar"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Профессионализм"
+        android:textSize="12sp"
+        android:textColor="@color/basicGrey"/>
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:progressTint="@color/progressBarColor"
+        android:progressDrawable="@drawable/doctor_profile_progress_bar"
+        style="?android:attr/progressBarStyleHorizontal"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ответственность"
+        android:textSize="12sp"
+        android:paddingTop="@dimen/cardMargin"
+        android:textColor="@color/basicGrey"/>
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:progressTint="@color/progressBarColor"
+        android:progressDrawable="@drawable/doctor_profile_progress_bar"
+        style="?android:attr/progressBarStyleHorizontal"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Внимательность"
+        android:textSize="12sp"
+        android:paddingTop="@dimen/cardMargin"
+        android:textColor="@color/basicGrey"/>
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:progressTint="@color/progressBarColor"
+        android:progressDrawable="@drawable/doctor_profile_progress_bar"
+        style="?android:attr/progressBarStyleHorizontal"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Пунктуальность"
+        android:textSize="12sp"
+        android:paddingTop="@dimen/cardMargin"
+        android:textColor="@color/basicGrey"/>
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:progressTint="@color/progressBarColor"
+        android:progressDrawable="@drawable/doctor_profile_progress_bar"
+        style="?android:attr/progressBarStyleHorizontal"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/doctorProfileRWFeedback"
+        android:layout_width="match_parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/defaultPadding"/>
+
+</LinearLayout>
