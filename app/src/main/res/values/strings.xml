@@ -83,4 +83,12 @@
     <string name="Extra">Дополнительно</string>
     <string name="EnterDatas">Заполните данные</string>
     <string name="required">Required</string>
+    <string name="backToDoctorsList">Назад</string>
+    <string name="chat">Чат</string>
+    <string name="video">Видео</string>
+    <string name="availableEntry">Доступная запись</string>
+    <string name="seniority">Стаж:</string>
+    <string name="education">Образование:</string>
+    <string name="experience">Опыт работы:</string>
+    <string name="healing">Лечение заболеваний:</string>
 </resources>

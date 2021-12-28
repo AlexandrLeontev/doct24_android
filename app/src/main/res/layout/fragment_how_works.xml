@@ -36,7 +36,7 @@
                 android:textStyle="bold"
                 android:paddingTop="@dimen/defaultPadding"
                 android:paddingBottom="@dimen/defaultPadding"
-                android:textSize="@dimen/howWorksTitleSize" />
+                android:textSize="@dimen/titleSize" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/howWorksText1"
@@ -50,7 +50,7 @@
                 android:textStyle="bold"
                 android:paddingTop="@dimen/defaultPadding"
                 android:paddingBottom="@dimen/defaultPadding"
-                android:textSize="@dimen/howWorksTitleSize" />
+                android:textSize="@dimen/titleSize" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/howWorksText2_1"

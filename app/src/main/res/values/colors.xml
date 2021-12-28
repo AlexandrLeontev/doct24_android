@@ -15,4 +15,5 @@
     <color name="secondaryBlue">#E0EFF6</color>
     <color name="secondaryYellow">#FCB71B</color>
     <color name="color_name">#06A7B3</color>
+    <color name="progressBarColor">#A2D6EF</color>
 </resources>
