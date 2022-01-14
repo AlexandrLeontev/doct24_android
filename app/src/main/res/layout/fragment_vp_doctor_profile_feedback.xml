@@ -3,22 +3,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical">
 
     <androidx.appcompat.widget.AppCompatRatingBar
         android:id="@+id/doctorProfileRatingBar"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:numStars="5"
-        style="@style/MyRatingBar"/>
+        style="?android:attr/ratingBarStyleIndicator"
+        android:theme="@style/MyRatingBar"/>
 
     <com.google.android.material.textview.MaterialTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Профессионализм"
+        android:text="@string/professionality"
         android:textSize="12sp"
         android:textColor="@color/basicGrey"/>
     <ProgressBar
+        android:id="@+id/progressProfessionality"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:progressTint="@color/progressBarColor"
@@ -28,25 +31,12 @@
     <com.google.android.material.textview.MaterialTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ответственность"
-        android:textSize="12sp"
-        android:paddingTop="@dimen/cardMargin"
-        android:textColor="@color/basicGrey"/>
-    <ProgressBar
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:progressTint="@color/progressBarColor"
-        android:progressDrawable="@drawable/doctor_profile_progress_bar"
-        style="?android:attr/progressBarStyleHorizontal"/>
-
-    <com.google.android.material.textview.MaterialTextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Внимательность"
+        android:text="@string/responsibility"
         android:textSize="12sp"
         android:paddingTop="@dimen/cardMargin"
         android:textColor="@color/basicGrey"/>
     <ProgressBar
+        android:id="@+id/progressResponsibility"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:progressTint="@color/progressBarColor"
@@ -56,22 +46,49 @@
     <com.google.android.material.textview.MaterialTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Пунктуальность"
+        android:text="@string/accurasy"
         android:textSize="12sp"
         android:paddingTop="@dimen/cardMargin"
         android:textColor="@color/basicGrey"/>
     <ProgressBar
+        android:id="@+id/progressAccurasy"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:progressTint="@color/progressBarColor"
         android:progressDrawable="@drawable/doctor_profile_progress_bar"
         style="?android:attr/progressBarStyleHorizontal"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/punctualnost"
+        android:textSize="12sp"
+        android:paddingTop="@dimen/cardMargin"
+        android:textColor="@color/basicGrey"/>
+    <ProgressBar
+        android:id="@+id/progressPunctualnost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:progressTint="@color/progressBarColor"
+        android:progressDrawable="@drawable/doctor_profile_progress_bar"
+        style="?android:attr/progressBarStyleHorizontal"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/leaveFeedback"
+        style="@style/Widget.MaterialComponents.Button"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/defaultPadding"
+        android:layout_marginBottom="@dimen/defaultPadding"
+        android:padding="@dimen/defaultPadding"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/doctorProfileRWFeedback"
         android:layout_width="match_parent"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         android:layout_height="wrap_content"
-        android:padding="@dimen/defaultPadding"/>
+        tools:listitem="@layout/item_doctor_profile_feedback" />
 
 </LinearLayout>

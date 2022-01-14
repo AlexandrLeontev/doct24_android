@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="0dp"
+    app:strokeColor="@color/basicGrey"
+    app:strokeWidth="1dp"
+    android:layout_margin="@dimen/cardMargin">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/defaultPadding">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/doctorProfileFeedbackPhoto"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:shapeAppearanceOverlay="@style/circleImageView"
+            android:src="@drawable/ic_adult_doctor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/doctorProfileFeedbackName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/doctorProfileFeedbackPhoto"
+            android:layout_marginStart="@dimen/cardMargin"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textSize="12sp" />
+
+        <RatingBar
+            android:id="@+id/doctorProfileFBRatingBar"
+            app:layout_constraintTop_toBottomOf="@id/doctorProfileFeedbackName"
+            app:layout_constraintStart_toEndOf="@id/doctorProfileFeedbackPhoto"
+            android:layout_marginStart="@dimen/cardMargin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            style="?android:attr/ratingBarStyleSmall"
+            android:theme="@style/MyRatingBar"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/doctorProfileFeedbackText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/doctorProfileFBRatingBar"
+            app:layout_constraintStart_toEndOf="@id/doctorProfileFeedbackPhoto"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="@dimen/cardMargin"
+            android:textSize="12sp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
