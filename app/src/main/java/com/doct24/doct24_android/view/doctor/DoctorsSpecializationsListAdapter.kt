@@ -37,8 +37,8 @@ class DoctorsSpecializationsListAdapter :
         this.onItemViewClickListener = onItemViewClickListener
     }
 
-    fun setData() {
-        specializationList = LocalSpecializationRepository().getSpecialization()
+    fun setData(data: List<Specialization>) {
+        specializationList = data
         notifyDataSetChanged()
     }
 

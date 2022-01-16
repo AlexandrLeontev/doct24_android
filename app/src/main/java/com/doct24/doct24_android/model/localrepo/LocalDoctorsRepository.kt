@@ -1,8 +1,10 @@
 package com.doct24.doct24_android.model.localrepo
 
 import com.doct24.doct24_android.model.Doctor
+import com.doct24.doct24_android.model.IDoctorsRepo
+import com.doct24.doct24_android.model.Specialization
 
-class LocalDoctorsRepository {
+class LocalDoctorsRepository: IDoctorsRepo {
 
     private val doctorsList = listOf(
         Doctor(
@@ -121,5 +123,5 @@ class LocalDoctorsRepository {
             null),
     )
 
-    fun getDoctorsList() = doctorsList
+    override fun getDoctorsList(category: Specialization) = doctorsList
 }

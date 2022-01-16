@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="@dimen/cardMargin">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/cardMargin">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/doctorListPhoto"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            app:shapeAppearanceOverlay="@style/circleImageView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/doctorListStage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Стаж: 10 лет"
+            android:layout_marginStart="@dimen/cardMargin"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/doctorListPhoto"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/doctorListName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Доктор Кто"
+            android:layout_marginStart="@dimen/cardMargin"
+            app:layout_constraintTop_toBottomOf="@id/doctorListStage"
+            app:layout_constraintStart_toEndOf="@id/doctorListPhoto"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/doctorListDegree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/secondaryYellow"
+            android:text="Стаж: "
+            android:layout_marginStart="@dimen/cardMargin"
+            app:layout_constraintTop_toBottomOf="@id/doctorListName"
+            app:layout_constraintStart_toEndOf="@id/doctorListPhoto"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/doctorListCan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/cardMargin"
+            android:text="Может принять сегодня"
+            android:textColor="@color/mainGreen"
+            app:layout_constraintTop_toBottomOf="@id/doctorListDegree"
+            app:layout_constraintStart_toEndOf="@id/doctorListPhoto"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/doctorListPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="от 3500Р"
+            android:textStyle="bold"
+            android:textColor="@color/mainGreen"
+            android:layout_marginStart="@dimen/cardMargin"
+            app:layout_constraintTop_toBottomOf="@id/doctorListDegree"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/stars"
+            android:layout_marginStart="@dimen/defaultPadding"
+            app:layout_constraintStart_toEndOf="@id/doctorListStage"
+            app:layout_constraintTop_toTopOf="@id/doctorListStage"
+            app:layout_constraintBottom_toTopOf="@id/doctorListName"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow"
+            android:layout_marginStart="@dimen/defaultPadding"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
