@@ -1,8 +1,10 @@
 package com.doct24.doct24_android.model.localrepo
 
 import com.doct24.doct24_android.model.Doctor
+import com.doct24.doct24_android.model.IDoctorsRepo
+import com.doct24.doct24_android.model.Specialization
 
-class LocalDoctorsRepository {
+class LocalDoctorsRepository: IDoctorsRepo {
 
     private val doctorsList = listOf(
         Doctor(
@@ -18,6 +20,7 @@ class LocalDoctorsRepository {
             "+79999999910",
             "doctor_email1@mail.ru",
             "NO",
+            "ADL",
             "University of Oxford",
             "Кандидат наук",
             null,
@@ -35,6 +38,7 @@ class LocalDoctorsRepository {
             "+79999999911",
             "doctor_email2@mail.ru",
             "NO",
+            "ADL",
             "University of Cambridge",
             "Кандидат наук",
             null,
@@ -51,6 +55,7 @@ class LocalDoctorsRepository {
             "+79999999913",
             "doctor_email3@mail.ru",
             "NO",
+            "ADL",
             "Imperial College London",
             "Доктор наук",
             null,
@@ -67,6 +72,7 @@ class LocalDoctorsRepository {
             "+79999999914",
             "doctor_email4@mail.ru",
             "NO",
+            "CHI",
             "University College London",
             "Доктор наук",
             null,
@@ -83,6 +89,7 @@ class LocalDoctorsRepository {
             "+79999999915",
             "doctor_email5@mail.ru",
             "NO",
+            "CHI",
             "King's College London",
             "Доктор наук",
             null,
@@ -99,6 +106,7 @@ class LocalDoctorsRepository {
             "+79999999916",
             "doctor_email6@mail.ru",
             "NO",
+            "FAM",
             "Karolinska Institute",
             "Кандидат наук",
             null,
@@ -115,11 +123,12 @@ class LocalDoctorsRepository {
             "+79999999917",
             "doctor_email7@mail.ru",
             "NO",
+            "FAM",
             "Universität Heidelberg",
             "Доктор наук",
             null,
             null),
     )
 
-    fun getDoctorsList() = doctorsList
+    override fun getDoctorsList(category: Specialization) = doctorsList
 }

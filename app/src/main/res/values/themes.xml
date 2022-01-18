@@ -52,4 +52,13 @@
         <item name="android:outlineSpotShadowColor">@color/basicGrey</item>
         <item name="android:outlineAmbientShadowColor">@color/white</item>
     </style>
+
+    <style name="circleImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="MyRatingBar" parent="Widget.AppCompat.RatingBar.Indicator">
+        <item name="colorControlNormal">@color/secondaryYellow</item>
+    </style>
 </resources>

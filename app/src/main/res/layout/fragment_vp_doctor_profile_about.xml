@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/seniority"
+        android:textStyle="bold"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/doctorProfileSeniorityInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/cardMargin"
+        android:text="@string/education"
+        android:textStyle="bold"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/doctorProfileEducationInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/cardMargin"
+        android:text="@string/experience"
+        android:textStyle="bold"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/doctorProfileExperienceInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/cardMargin"
+        android:text="@string/healing"
+        android:textStyle="bold"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/doctorProfileHealingInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         />
+
+</LinearLayout>

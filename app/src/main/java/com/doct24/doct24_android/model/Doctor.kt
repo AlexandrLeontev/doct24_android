@@ -18,6 +18,7 @@ data class Doctor(
     val phone_number: String,
     val email: String,
     val category: String, //это вообще что именно?х)
+    val age_category: String,
     val education: String,
     val degree: String,
     val appointment_for_doctors: @RawValue List<String>?,

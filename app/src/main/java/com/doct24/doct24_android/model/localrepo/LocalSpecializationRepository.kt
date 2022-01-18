@@ -1,8 +1,10 @@
 package com.doct24.doct24_android.model.localrepo
 
+import com.doct24.doct24_android.model.Doctor
+import com.doct24.doct24_android.model.ISpecialisationsRepository
 import com.doct24.doct24_android.model.Specialization
 
-class LocalSpecializationRepository {
+class LocalSpecializationRepository : ISpecialisationsRepository {
 
     private val specializationList = listOf(
         Specialization(1, "Акушер"),
@@ -20,6 +22,10 @@ class LocalSpecializationRepository {
         Specialization(13, "Врач спортивной медицины")
     )
 
-    fun getSpecialization() = specializationList
+    override fun getChildSpecList() = specializationList
+
+    override fun getAdultSpecList() = specializationList
+
+    override fun getFamilySpecList() = specializationList
 
 }
