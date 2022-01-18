@@ -7,7 +7,8 @@
     <dimen name="icMainScreenButtonsSize">50dp</dimen>
     <dimen name="paddingForPopup">24dp</dimen>
     <dimen name="iconSizeForPopup">30dp</dimen>
-    <dimen name="howWorksTitleSize">18sp</dimen>
+    <dimen name="titleSize">18sp</dimen>
     <dimen name="defTextSize">16sp</dimen>
     <dimen name="paddingDoctorSpecCategory">20dp</dimen>
+    <dimen name="doctorsListTitleSize">28sp</dimen>
 </resources>

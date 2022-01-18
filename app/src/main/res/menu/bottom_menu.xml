@@ -8,7 +8,7 @@
         app:showAsAction="always" />
 
     <item
-        android:id="@+id/doctorsListFragment"
+        android:id="@+id/doctorsSpecListFragment"
         android:icon="@drawable/menu_icon_doctors"
         android:title="@string/doctors"
         app:showAsAction="always"/>

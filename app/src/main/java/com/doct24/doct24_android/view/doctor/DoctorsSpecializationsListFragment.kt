@@ -1,5 +1,6 @@
 package com.doct24.doct24_android.view.doctor
 
+import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -7,8 +8,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.findNavController
 import com.doct24.doct24_android.R
 import com.doct24.doct24_android.databinding.FragmentDoctorsSpecialisationsListBinding
+import com.doct24.doct24_android.model.localrepo.LocalSpecializationRepository
 import com.doct24.doct24_android.view.hide
 import com.doct24.doct24_android.view.show
 
@@ -51,11 +54,7 @@ class DoctorsSpecializationsListFragment : Fragment() {
                 setSmallButtonsStroke(2)
             }
         }
-//        binding.recyclerSpec.adapter = adapter
-//        adapter.setData()
-//        adapter.setOnItemViewClickListener {
-//            //переход к списку докторов по категории
-//        }
+        binding.recyclerSpec.adapter = adapter
     }
 
     private fun onBaseCategoryClicked(categoryID: Int) {
@@ -74,23 +73,40 @@ class DoctorsSpecializationsListFragment : Fragment() {
         with(binding){
             when (categoryID) {
                 0 -> {
-                    smallButtonChildDoctor.strokeWidth = 2
                     smallButtonAdultDoctor.strokeColor = resources.getColor(R.color.white)
+                    smallButtonAdultDoctor.invalidate()
                     smallButtonFamilyDoctor.strokeColor = resources.getColor(R.color.white)
+                    smallButtonFamilyDoctor.invalidate()
+                    smallButtonChildDoctor.strokeWidth = 2
                     smallButtonChildDoctor.strokeColor = resources.getColor(R.color.mainGreen)
+                    adapter.setData(LocalSpecializationRepository().getChildSpecList())
+                    recyclerSpec.show()
                 }
                 1 -> {
                     smallButtonChildDoctor.strokeColor = resources.getColor(R.color.white)
+                    smallButtonChildDoctor.invalidate()
                     smallButtonAdultDoctor.strokeWidth = 2
-                    smallButtonFamilyDoctor.strokeColor = resources.getColor(R.color.white)
                     smallButtonAdultDoctor.strokeColor = resources.getColor(R.color.mainGreen)
+                    smallButtonFamilyDoctor.strokeColor = resources.getColor(R.color.white)
+                    smallButtonFamilyDoctor.invalidate()
+                    adapter.setData(LocalSpecializationRepository().getAdultSpecList())
+                    recyclerSpec.show()
                 }
                 else -> {
                     smallButtonChildDoctor.strokeColor = resources.getColor(R.color.white)
+                    smallButtonChildDoctor.invalidate()
                     smallButtonAdultDoctor.strokeColor = resources.getColor(R.color.white)
+                    smallButtonAdultDoctor.invalidate()
                     smallButtonFamilyDoctor.strokeWidth = 2
                     smallButtonFamilyDoctor.strokeColor = resources.getColor(R.color.mainGreen)
+                    adapter.setData(LocalSpecializationRepository().getFamilySpecList())
+                    recyclerSpec.show()
                 }
+            }
+            adapter.setOnItemViewClickListener {
+                findNavController().navigate(R.id.action_doctorsListFragment_to_doctorListFragment,
+                    Bundle().apply
+                    { putParcelable(DoctorListFragment.SPEC_BUNDLE, it) })
             }
         }
     }
