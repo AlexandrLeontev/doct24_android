@@ -11,4 +11,9 @@
     <dimen name="defTextSize">16sp</dimen>
     <dimen name="paddingDoctorSpecCategory">20dp</dimen>
     <dimen name="doctorsListTitleSize">28sp</dimen>
+    <dimen name="downloadFragmentImageViewLayoutHeight">0dp</dimen>
+    <dimen name="downloadFragmentLabelWidth">210dp</dimen>
+    <dimen name="downloadFragmentLabelHeight">92dp</dimen>
+    <dimen name="downloadFragmentMarginTop">8dp</dimen>
+
 </resources>

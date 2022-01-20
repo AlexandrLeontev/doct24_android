@@ -86,4 +86,9 @@
         android:label="PatientDataFragment"
         tools:layout="@layout/fragment_patient_data"/>
 
+    <fragment
+        android:id="@+id/DownloadFragment"
+        android:label="DownloadFragment"
+        tools:layout="@layout/fragment_download"/>
+
 </navigation>
