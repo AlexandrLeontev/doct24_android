@@ -109,5 +109,6 @@
     <string name="doctorLocationInput">Россия, Москва</string>
     <string name="doctorSpecialityBack">Выбор специализации</string>
     <string name="backToHome">На главную страницу</string>
-    <string name="backToDoctorsList">Выбор врача</string>
+    <string name="kg">кг</string>
+
 </resources>
