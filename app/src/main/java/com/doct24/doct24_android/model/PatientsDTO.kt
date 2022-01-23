@@ -5,8 +5,12 @@ import kotlinx.android.parcel.Parcelize
 import kotlinx.android.parcel.RawValue
 
 
-@Parcelize
-data class Patients(
+data class PatientsDTO(
+        val fact: FactDTO?
+)
+
+data class FactDTO(
+
         val id: Int,
         val username: String,
         val patronymic: String,
@@ -17,4 +21,4 @@ data class Patients(
         val email: String,
         val appointment_for_patients: @RawValue List<String>?,
         val comment: @RawValue List<String>?
-) : Parcelable
+)
