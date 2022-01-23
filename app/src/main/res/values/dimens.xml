@@ -11,4 +11,5 @@
     <dimen name="defTextSize">16sp</dimen>
     <dimen name="paddingDoctorSpecCategory">20dp</dimen>
     <dimen name="doctorsListTitleSize">28sp</dimen>
+    <dimen name="doctor_profile_about_experience_margin">50dp</dimen>
 </resources>

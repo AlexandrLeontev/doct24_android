@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
@@ -12,6 +13,7 @@ import com.doct24.doct24_android.databinding.FragmentDoctorProfileBinding
 import com.doct24.doct24_android.databinding.FragmentDoctorsListBinding
 import com.doct24.doct24_android.model.Doctor
 import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.fragment_vp_doctor_profile_entry.*
 
 class DoctorProfileFragment : Fragment() {
 
@@ -37,11 +39,14 @@ class DoctorProfileFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         doctor = arguments?.getParcelable(BUNDLE_DOCTOR) ?:Doctor(0, "", "", "", "", 0, "", "", "",
-        "", "", "", "", "", null, null)
+        "", "", "", "", "", "", null, null)
         binding.doctorProfileBackButton.setOnClickListener {
             findNavController().popBackStack()
         }
+
+
         init()
+
 
     }
 
@@ -51,7 +56,7 @@ class DoctorProfileFragment : Fragment() {
                 .load(doctor.avatar)
                 .into(doctorProfilePhoto)
             doctorProfileName.text = "${doctor.first_name} ${doctor.last_name}"
-            doctorProfileAgeInput.text = "${doctor.age} лет"
+            doctorProfileAgeInput.text = "Стаж: ${doctor.age} лет"
             doctorProfileSpecInput.text = doctor.specialization
             doctorProfileLocationInput.text = "${doctor.country}, ${doctor.city}"
         }

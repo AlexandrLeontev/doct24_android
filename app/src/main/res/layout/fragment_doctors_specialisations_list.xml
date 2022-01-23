@@ -14,6 +14,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/doctorSpecialityBackButton"
+        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="0dp"
+        android:text="@string/backToHome"
+        android:textColor="@color/mainGreen"
+        android:textSize="@dimen/defTextSize"
+        app:icon="@drawable/ic_baseline_arrow_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spaceSpecFragment" />
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/searchInputLayout"
         style="@style/searchTextField"
@@ -23,7 +36,7 @@
         app:boxBackgroundColor="@color/lightGray"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/spaceSpecFragment"
+        app:layout_constraintTop_toBottomOf="@id/doctorSpecialityBackButton"
         app:startIconCheckable="true"
         app:startIconDrawable="@drawable/icon_search">
 
