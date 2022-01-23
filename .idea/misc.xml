@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="11" project-jdk-type="JavaSDK">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/GrafGAD/StudioProjects/doct24_android/app/src/main/res/drawable/ic_arrow.xml" value="0.25092592592592594" />
+        <entry key="..\:/Users/GrafGAD/StudioProjects/doct24_android/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.3828125" />
+        <entry key="..\:/Users/GrafGAD/StudioProjects/doct24_android/app/src/main/res/layout/activity_main.xml" value="0.27309782608695654" />
+        <entry key="..\:/Users/GrafGAD/StudioProjects/doct24_android/app/src/main/res/layout/doctor_profile_container.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/GrafGAD/StudioProjects/doct24_android/app/src/main/res/layout/fragment_chat.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/GrafGAD/StudioProjects/doct24_android/app/src/main/res/layout/fragment_doctor_profile.xml" value="0.3052536231884058" />
+        <entry key="..\:/Users/GrafGAD/StudioProjects/doct24_android/app/src/main/res/layout/fragment_doctors_list.xml" value="0.30027173913043476" />
+        <entry key="..\:/Users/GrafGAD/StudioProjects/doct24_android/app/src/main/res/layout/fragment_doctors_specialisations_list.xml" value="0.30027173913043476" />
+        <entry key="..\:/Users/GrafGAD/StudioProjects/doct24_android/app/src/main/res/layout/fragment_home.xml" value="0.27309782608695654" />
+        <entry key="..\:/Users/GrafGAD/StudioProjects/doct24_android/app/src/main/res/layout/fragment_how_works.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/GrafGAD/StudioProjects/doct24_android/app/src/main/res/layout/fragment_meetings.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/GrafGAD/StudioProjects/doct24_android/app/src/main/res/layout/fragment_patient_profile.xml" value="0.3663949275362319" />
+        <entry key="..\:/Users/GrafGAD/StudioProjects/doct24_android/app/src/main/res/layout/fragment_profile.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/GrafGAD/StudioProjects/doct24_android/app/src/main/res/layout/fragment_vp_doctor_profile_about.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/GrafGAD/StudioProjects/doct24_android/app/src/main/res/layout/fragment_vp_doctor_profile_entry.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/GrafGAD/StudioProjects/doct24_android/app/src/main/res/layout/fragment_vp_doctor_profile_feedback.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/GrafGAD/StudioProjects/doct24_android/app/src/main/res/layout/item_doctor_list.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/GrafGAD/StudioProjects/doct24_android/app/src/main/res/layout/item_doctor_profile_feedback.xml" value="0.35260416666666666" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

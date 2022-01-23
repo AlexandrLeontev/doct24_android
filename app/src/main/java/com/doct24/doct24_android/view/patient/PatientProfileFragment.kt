@@ -1,9 +1,6 @@
 package com.doct24.doct24_android.view.patient
 
-import android.app.Activity
-import android.content.Intent
-import android.content.pm.PackageManager
-import android.net.Uri
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -14,6 +11,7 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
+import com.doct24.doct24_android.MainActivity
 import com.doct24.doct24_android.R
 import com.doct24.doct24_android.databinding.FragmentProfileBinding
 import com.doct24.doct24_android.view.hide

@@ -91,4 +91,23 @@
     <string name="education">Образование:</string>
     <string name="experience">Опыт работы:</string>
     <string name="healing">Лечение заболеваний:</string>
+    <string name="professionality">Профессионализм</string>
+    <string name="responsibility">Ответственность</string>
+    <string name="accurasy">Внимательность</string>
+    <string name="punctualnost">Пунктуальность</string>
+    <string name="leaveFeedback">Написать отзыв</string>
+    <string name="sign">Записаться</string>
+    <string name="appointmentText">Запись</string>
+    <string name="aboutDoctor">О враче</string>
+    <string name="doctorFeedback">Отзывы(36)</string>
+    <string name="doctorAge">Возраст:</string>
+    <string name="doctorAgeInput">36</string>
+    <string name="doctorName">Петров Александр Федорович</string>
+    <string name="doctorSpeciality">Специализация:</string>
+    <string name="doctorSpecialityInput">Гастроэнтеролог, аллерголог</string>
+    <string name="doctorLocation">Местоположение:</string>
+    <string name="doctorLocationInput">Россия, Москва</string>
+    <string name="doctorSpecialityBack">Выбор специализации</string>
+    <string name="backToHome">На главную страницу</string>
+    <string name="backToDoctorsList">Выбор врача</string>
 </resources>

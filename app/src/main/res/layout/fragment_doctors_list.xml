@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:layout_marginBottom="?attr/actionBarSize"
     android:padding="@dimen/defaultPadding">
 
@@ -12,7 +12,21 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/doctorProfileBackButton"
+        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="0dp"
+        android:text="@string/doctorSpecialityBack"
+        android:textColor="@color/mainGreen"
+        android:textSize="@dimen/defTextSize"
+        app:icon="@drawable/ic_baseline_arrow_back"
+        app:layout_constraintBottom_toTopOf="@id/searchInputLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spaceDoctorsListFragment" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/searchInputLayout"
@@ -23,7 +37,7 @@
         app:boxBackgroundColor="@color/lightGray"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/spaceDoctorsListFragment"
+        app:layout_constraintTop_toBottomOf="@id/doctorProfileBackButton"
         app:startIconCheckable="true"
         app:startIconDrawable="@drawable/icon_search">
 
@@ -34,28 +48,28 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
+
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/doctorListTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/searchInputLayout"
-        android:textSize="@dimen/doctorsListTitleSize"
-        android:padding="@dimen/cardMargin"
         android:gravity="center"
+        android:padding="@dimen/cardMargin"
         android:text="Анестезиолог"
-        />
+        android:textSize="@dimen/doctorsListTitleSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/searchInputLayout" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerDoctorsList"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        tools:listitem="@layout/item_doctor_list"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/doctorListTitle"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        tools:listitem="@layout/item_doctor_list" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
