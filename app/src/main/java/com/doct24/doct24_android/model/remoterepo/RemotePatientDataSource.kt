@@ -19,7 +19,7 @@ class RemotePatientDataSource {
         .build().create(ApiService::class.java)
 
     fun getPatientDetails(lat: Double, lon: Double, callback: Callback<PatientsDTO>) {
-        patientDataSourceApi.getPatients(BuildConfig.APPLICATION_ID.).enqueue(callback)
+//        patientDataSourceApi.getPatients(BuildConfig.APPLICATION_ID.).enqueue(callback)
     }
 
 }

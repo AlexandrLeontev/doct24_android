@@ -1,6 +1,6 @@
 package com.doct24.doct24_android
 
-import com.doct24.doct24_android.model.Patients
+
 import com.doct24.doct24_android.model.PatientsDTO
 import com.google.gson.annotations.SerializedName
 import retrofit2.Call
@@ -14,10 +14,14 @@ interface ApiService {
 
 }
 
+class ApiPatientDetailsModel {
 
-data class ApiPatientDetailsModel(
-    val id: Int?,
-    @Header("Patient-API-Key") val token: String,
+}
 
-    @SerializedName("username") val username: String,
-): Call<PatientsDTO>
+
+//data class ApiPatientDetailsModel(
+//    val id: Int?,
+//    @Header("Patient-API-Key") val token: String,
+//
+//    @SerializedName("username") val username: String,
+//): Call<PatientsDTO>
