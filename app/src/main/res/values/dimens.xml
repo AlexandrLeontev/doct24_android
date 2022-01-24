@@ -12,4 +12,8 @@
     <dimen name="paddingDoctorSpecCategory">20dp</dimen>
     <dimen name="doctorsListTitleSize">28sp</dimen>
     <dimen name="doctor_profile_about_experience_margin">50dp</dimen>
+    <dimen name="meetingCardPadding">8dp</dimen>
+    <dimen name="meetingButtonTextSize">14sp</dimen>
+    <dimen name="meetingButtonCornerRadius">15dp</dimen>
+    <dimen name="meetingButtonStrokeWidth">2dp</dimen>
 </resources>

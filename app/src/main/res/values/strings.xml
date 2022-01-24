@@ -110,5 +110,16 @@
     <string name="doctorSpecialityBack">Выбор специализации</string>
     <string name="backToHome">На главную страницу</string>
     <string name="kg">кг</string>
+    <string name="future">Будущие</string>
+    <string name="past">Прошедшие</string>
+    <string name="date">Дата</string>
+    <string name="meeting_time">Время приёма</string>
+    <string name="not_paid">Не оплачено</string>
+    <string name="paid">Оплачено</string>
+    <string name="video_consultation">Видео консультация</string>
+    <string name="change">Изменить</string>
+    <string name="start">Начать</string>
+    <string name="canceled">Консультация отменена</string>
+    <string name="rebook">Записаться повторно</string>
 
 </resources>

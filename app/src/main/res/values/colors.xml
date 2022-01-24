@@ -16,4 +16,5 @@
     <color name="secondaryYellow">#FCB71B</color>
     <color name="color_name">#06A7B3</color>
     <color name="progressBarColor">#A2D6EF</color>
+    <color name="attention_color_red">#FF3636</color>
 </resources>
