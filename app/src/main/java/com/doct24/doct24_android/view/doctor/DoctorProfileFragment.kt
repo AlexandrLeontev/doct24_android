@@ -43,11 +43,7 @@ class DoctorProfileFragment : Fragment() {
         binding.doctorProfileBackButton.setOnClickListener {
             findNavController().popBackStack()
         }
-
-
         init()
-
-
     }
 
     private fun init() {
@@ -56,7 +52,7 @@ class DoctorProfileFragment : Fragment() {
                 .load(doctor.avatar)
                 .into(doctorProfilePhoto)
             doctorProfileName.text = "${doctor.first_name} ${doctor.last_name}"
-            doctorProfileAgeInput.text = "Стаж: ${doctor.age} лет"
+            doctorProfileAgeInput.text = "${doctor.age} лет"
             doctorProfileSpecInput.text = doctor.specialization
             doctorProfileLocationInput.text = "${doctor.country}, ${doctor.city}"
         }

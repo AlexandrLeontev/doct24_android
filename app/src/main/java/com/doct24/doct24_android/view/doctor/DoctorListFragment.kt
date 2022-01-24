@@ -46,6 +46,9 @@ class DoctorListFragment : Fragment() {
                     Bundle().apply
                     { putParcelable(DoctorProfileFragment.BUNDLE_DOCTOR, it) })
             }
+            doctorProfileBackButton.setOnClickListener {
+                findNavController().popBackStack()
+            }
         }
     }
 

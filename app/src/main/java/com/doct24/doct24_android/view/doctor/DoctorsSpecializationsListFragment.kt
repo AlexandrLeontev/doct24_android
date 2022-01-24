@@ -53,6 +53,9 @@ class DoctorsSpecializationsListFragment : Fragment() {
             smallButtonFamilyDoctor.setOnClickListener {
                 setSmallButtonsStroke(2)
             }
+            doctorSpecialityBackButton.setOnClickListener {
+                findNavController().popBackStack()
+            }
         }
         binding.recyclerSpec.adapter = adapter
     }
