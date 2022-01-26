@@ -281,7 +281,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
 
-        <androidx.cardview.widget.CardView
+        <com.google.android.material.card.MaterialCardView
             android:id="@+id/cardHeght"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -289,7 +289,9 @@
             app:cardCornerRadius="10dp"
             app:layout_constraintHorizontal_weight="5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvHeigh">
+            app:layout_constraintTop_toBottomOf="@id/tvHeigh"
+            app:strokeColor="@color/otherGrey"
+            app:strokeWidth="1dp">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -318,9 +320,9 @@
                     android:layout_margin="6dp"
                     android:text="@string/sm" />
             </LinearLayout>
-        </androidx.cardview.widget.CardView>
+        </com.google.android.material.card.MaterialCardView>
 
-        <androidx.cardview.widget.CardView
+        <com.google.android.material.card.MaterialCardView
             android:id="@+id/cardWaight"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -329,7 +331,9 @@
             app:layout_constraintEnd_toStartOf="@+id/cardBlood"
             app:layout_constraintHorizontal_weight="2"
             app:layout_constraintStart_toEndOf="@+id/cardHeght"
-            app:layout_constraintTop_toBottomOf="@id/tvWaight">
+            app:layout_constraintTop_toBottomOf="@id/tvWaight"
+            app:strokeColor="@color/otherGrey"
+            app:strokeWidth="1dp">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -358,9 +362,9 @@
                     android:layout_margin="6dp"
                     android:text="кг" />
             </LinearLayout>
-        </androidx.cardview.widget.CardView>
+        </com.google.android.material.card.MaterialCardView>
 
-        <androidx.cardview.widget.CardView
+        <com.google.android.material.card.MaterialCardView
             android:id="@+id/cardBlood"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -368,7 +372,9 @@
             app:cardCornerRadius="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_weight="2"
-            app:layout_constraintTop_toBottomOf="@+id/tvBloodType">
+            app:layout_constraintTop_toBottomOf="@+id/tvBloodType"
+            app:strokeColor="@color/otherGrey"
+            app:strokeWidth="1dp">
 
             <LinearLayout
                 android:layout_width="83dp"
@@ -392,7 +398,7 @@
                     android:text="@string/DobleSpace" />
 
             </LinearLayout>
-        </androidx.cardview.widget.CardView>
+        </com.google.android.material.card.MaterialCardView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

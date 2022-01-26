@@ -1,13 +1,15 @@
 package com.doct24.doct24_android.view.patient
 
 import android.app.Activity
+import android.app.AlertDialog
 import android.content.Intent
 import android.content.pm.PackageManager
-import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
+import android.widget.NumberPicker
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -17,13 +19,26 @@ import androidx.navigation.fragment.findNavController
 import com.doct24.doct24_android.R
 import com.doct24.doct24_android.databinding.FragmentProfileBinding
 import com.doct24.doct24_android.view.hide
+import com.doct24.doct24_android.view.patient.dataFragments.PatientDataFragment
 import com.doct24.doct24_android.view.show
+import kotlinx.android.synthetic.main.dialog_layout_custom.view.*
 import kotlinx.android.synthetic.main.fragment_home.materialButton
 import kotlinx.android.synthetic.main.fragment_home.popUpFutureRelease
 import kotlinx.android.synthetic.main.fragment_profile.*
 
+class ProfileFragment : Fragment() {
 
-class ProfileFragment: Fragment() {
+    companion object {
+        const val PATIENT_HEIGHT = "Рост"
+        const val PATIENT_WEIGHT = "Вес"
+        const val PATIENT_BLOOD_TYPE = "Группа крови"
+
+        //image pick code
+        private val IMAGE_PICK_CODE = 1000
+
+        //Permission code
+        private val PERMISSION_CODE = 1001
+    }
 
     private var _binding: FragmentProfileBinding? = null
     private val binding get() = _binding!!
@@ -40,7 +55,16 @@ class ProfileFragment: Fragment() {
         navController = NavHostFragment.findNavController(this)
 
 
-        with(binding){
+        with(binding) {
+            cardHeght.setOnClickListener {
+                showDialogFragment(PATIENT_HEIGHT, 50, 250)
+            }
+            cardWaight.setOnClickListener {
+                showDialogFragment(PATIENT_WEIGHT, 30, 200)
+            }
+            cardBlood.setOnClickListener {
+                showDialogFragment(PATIENT_BLOOD_TYPE, 0, 0)
+            }
             cardAllerg.setOnClickListener {
                 showPopUpNotify()
             }
@@ -79,10 +103,10 @@ class ProfileFragment: Fragment() {
 //                }
             }
 
-            profileViewModel.image.observe(this@ProfileFragment, {
+            profileViewModel.image.observe(viewLifecycleOwner) {
 //                binding.imPrfilePhoto.id = it
                 im_prfile_photo.setImageURI(it)
-            })
+            }
 
             profileViewModel.getImage()
 
@@ -92,28 +116,57 @@ class ProfileFragment: Fragment() {
 
     }
 
+    private fun showDialogFragment(title: String, minValue: Int, maxValue: Int) {
+        val dialogView = layoutInflater.inflate(R.layout.dialog_layout_custom, null)
+        val dialogAlert = AlertDialog.Builder(requireActivity())
+            .setView(dialogView)
+            .show()
+        dialogAlert.window?.decorView?.setBackgroundResource(R.drawable.dialog_background)
+        val buttonAccept = dialogView.findViewById<ImageButton>(R.id.buttonAccept)
+        dialogView.textView.text = title
+        val numberPicker = dialogView.findViewById<NumberPicker>(R.id.numberPicker)
+        if (minValue > 0) {
+            numberPicker.minValue = minValue
+            numberPicker.maxValue = maxValue
+        } else {
+            val values = arrayOf(
+                "O (I) Rh+",
+                "O (I) Rh-",
+                "A (II) Rh+",
+                "А (II) Rh-",
+                "B (III) Rh+",
+                "B (III) Rh-",
+                "AB (IV) Rh-"
+            )
+            numberPicker.minValue = 0
+            numberPicker.maxValue = values.size - 1
+            numberPicker.displayedValues = values
+        }
+        numberPicker.wrapSelectorWheel = true
+        buttonAccept.setOnClickListener {
+            dialogAlert.dismiss()
+        }
+    }
+
     private fun pickImageFromGallery() {
         val intent = Intent(Intent.ACTION_PICK)
         intent.type = "image/*"
         startActivityForResult(intent, IMAGE_PICK_CODE)
     }
 
-    companion object {
-        //image pick code
-        private val IMAGE_PICK_CODE = 1000;
-        //Permission code
-        private val PERMISSION_CODE = 1001;
-    }
-
-     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
-        when(requestCode){
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<out String>,
+        grantResults: IntArray
+    ) {
+        when (requestCode) {
             PERMISSION_CODE -> {
-                if (grantResults.size >0 && grantResults[0] ==
-                        PackageManager.PERMISSION_GRANTED){
+                if (grantResults.size > 0 && grantResults[0] ==
+                    PackageManager.PERMISSION_GRANTED
+                ) {
                     //permission from popup granted
                     pickImageFromGallery()
-                }
-                else{
+                } else {
                     //permission from popup denied
                     Toast.makeText(requireContext(), "Permission denied", Toast.LENGTH_SHORT).show()
                 }
@@ -129,20 +182,20 @@ class ProfileFragment: Fragment() {
 //            profileViewModel.image.postValue(data?.)
         }
 
- }
-
-        private fun showPopUpNotify() {
-            popUpFutureRelease.show()
-            materialButton.setOnClickListener {
-                popUpFutureRelease.hide()
-            }
-
-        }
-
-        override fun onDestroy() {
-            super.onDestroy()
-            _binding = null
-
-        }
     }
+
+    private fun showPopUpNotify() {
+        popUpFutureRelease.show()
+        materialButton.setOnClickListener {
+            popUpFutureRelease.hide()
+        }
+
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        _binding = null
+
+    }
+}
 

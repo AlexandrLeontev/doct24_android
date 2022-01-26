@@ -82,7 +82,7 @@
 
     <fragment
         android:id="@+id/PatientDataFragment"
-        android:name="com.doct24.doct24_android.view.patient.dataFragements.PatientDataFragment"
+        android:name="com.doct24.doct24_android.view.patient.dataFragments.PatientDataFragment"
         android:label="PatientDataFragment"
         tools:layout="@layout/fragment_patient_data"/>
 
