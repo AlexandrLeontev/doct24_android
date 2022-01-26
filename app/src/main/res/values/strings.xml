@@ -91,4 +91,9 @@
     <string name="education">Образование:</string>
     <string name="experience">Опыт работы:</string>
     <string name="healing">Лечение заболеваний:</string>
+    <string name="parameter">text</string>
+    <string-array name="sex">
+        <item>Мужской</item>
+        <item>Женский</item>
+    </string-array>
 </resources>
