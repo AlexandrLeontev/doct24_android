@@ -1,0 +1,43 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/entrance_bkg"
+    android:orientation="vertical">
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/entranceFragmentMarginTop"
+        android:layout_marginBottom="@dimen/entranceSpaceMarginBotton" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button2"
+        style="@style/ButtonEntranceStyle"
+        android:layout_marginBottom="25sp"
+        android:background="@drawable/button_main_shape"
+        android:text="@string/EntranceButtonText1"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:visibility="visible" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button3"
+        style="@style/ButtonEntranceStyle"
+        android:background="@drawable/button_main_shape2"
+        android:text="@string/EntranceButtonText2"
+        android:textAllCaps="false"
+        android:layout_marginBottom="@dimen/entranceFragmentMarginBottom"
+        android:textColor="@color/basicGrey"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/entranceFragmentMarginBottom"
+        android:layout_marginTop="@dimen/entranceFragmentMarginTop"
+        android:layout_marginRight="@dimen/entranceFragmentMarginBottom"
+        android:textSize="@dimen/entranceFragmentTextSize"
+        android:text="@string/EntranceTextViewText"
+        android:textAlignment="center" />
+
+</LinearLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/onboarding_three_bkg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/onboardingFragmentMarginLeftRight"
+        android:layout_marginTop="@dimen/onboardingFragmentMarginTop"
+        android:layout_marginRight="@dimen/onboardingFragmentMarginLeftRight"
+        android:layout_marginBottom="@dimen/onboardingFragmentMarginBottom"
+        android:background="@drawable/layout_style"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/onboardingFragmentMainImageHeight"
+            android:layout_marginLeft="@dimen/onboardingFragmentMarginLeftRight"
+            android:layout_marginTop="@dimen/onboardingFragmentMarginLeftRight"
+            android:layout_marginRight="@dimen/onboardingFragmentMarginLeftRight"
+            app:srcCompat="@drawable/onboarding_three_doctor" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/onboardingFragmentTextView1MarginTop"
+            android:fontFamily="@font/rubik"
+            android:text="@string/LoveYourTime"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="@dimen/onboardingFragmentTextView1TextSize"
+            android:textStyle="bold"
+            android:typeface="normal" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/onboardingFragmentTextView2Height"
+            android:layout_marginLeft="@dimen/onboardingFragmentTextView1MarginTop"
+            android:layout_marginTop="@dimen/onboardingFragmentTextView1MarginTop"
+            android:layout_marginRight="@dimen/onboardingFragmentTextView1MarginTop"
+            android:fontFamily="@font/rubik"
+            android:text="@string/Onboard3Text"
+            android:textAlignment="center"
+            android:textColor="@color/black" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button"
+            style="@style/ButtonOnboardingsFramentsStyle"
+            android:background="@drawable/button_main_shape"
+            android:text="@string/OnboardButtonText"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/onboardingFragmentBottomTextSize"
+        android:orientation="horizontal"
+        tools:visibility="visible">
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/onboardingFragmentMarginLeftRight"
+            app:srcCompat="@drawable/onboarding_ellipse_white" />
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/onboardingFragmentMarginLeftRight"
+            app:srcCompat="@drawable/onboarding_ellipse_white" />
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/onboarding_ellipse_green" />
+
+    </LinearLayout>
+</LinearLayout>

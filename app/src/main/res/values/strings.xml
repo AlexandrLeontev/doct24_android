@@ -1,4 +1,5 @@
 <resources>
+
     <string name="app_name">Doct24</string>
     <string name="home">Главная</string>
     <string name="doctors">Врачи</string>
@@ -91,4 +92,17 @@
     <string name="education">Образование:</string>
     <string name="experience">Опыт работы:</string>
     <string name="healing">Лечение заболеваний:</string>
+    <string name="AllWorldDoctors">Врачи со всего мира:</string>
+    <string name="Onboard1Text">Подберем нужного врача из России, Европы, США, Канады и Израиля.</string>
+    <string name="OnboardButtonText">Далее</string>
+    <string name="AllHours">24 часа на связи</string>
+    <string name="Onboard2Text">Ответим на ваши вопросы в любое время суток и оперативно организуем онлайн-консультацию c врачом.</string>
+    <string name="LoveYourTime">Ценим ваше время</string>
+    <string name="Onboard3Text">Вы получаете консультацию на следующий день после запроса, либо через 2 дня, если врач в другом часовом поясе.</string>
+    <string name="EntranceButtonText1">Вход</string>
+    <string name="EntranceButtonText2">Пропустить</string>
+    <string name="EntranceTextViewText">Регистрируясь, Вы принимаете условия  <string name="link"><a href="https://www.google.com/">«Пользовательского соглашения»</a></string>
+ приложения Доктор24</string>
+
+
 </resources>

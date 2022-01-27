@@ -19,6 +19,7 @@
             android:id="@+id/action_homeFragment_to_chatFragment"
             app:destination="@id/chatFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/doctorsSpecListFragment"
         android:name="com.doct24.doct24_android.view.doctor.DoctorsSpecializationsListFragment"
@@ -28,11 +29,12 @@
             android:id="@+id/action_doctorsListFragment_to_doctorListFragment"
             app:destination="@id/doctorListFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/meetingsFragment"
         android:name="com.doct24.doct24_android.view.MeetingsFragment"
         android:label="MeetingsFragment"
-        tools:layout="@layout/fragment_meetings"/>
+        tools:layout="@layout/fragment_meetings" />
 
 
     <fragment
@@ -57,16 +59,16 @@
     </fragment>
 
 
-        <fragment
+    <fragment
         android:id="@+id/howWorksFragment"
         android:name="com.doct24.doct24_android.view.home.HowWorksFragment"
         android:label="HowWorksFragment"
-        tools:layout="@layout/fragment_how_works"/>
+        tools:layout="@layout/fragment_how_works" />
     <fragment
         android:id="@+id/chatFragment"
         android:name="com.doct24.doct24_android.view.home.ChatFragment"
         android:label="ChatFragment"
-        tools:layout="@layout/fragment_chat"/>
+        tools:layout="@layout/fragment_chat" />
     <fragment
         android:id="@+id/doctorListFragment"
         android:name="com.doct24.doct24_android.view.doctor.DoctorListFragment"
@@ -84,11 +86,57 @@
         android:id="@+id/PatientDataFragment"
         android:name="com.doct24.doct24_android.view.patient.dataFragements.PatientDataFragment"
         android:label="PatientDataFragment"
-        tools:layout="@layout/fragment_patient_data"/>
+        tools:layout="@layout/fragment_patient_data" />
 
     <fragment
         android:id="@+id/DownloadFragment"
+        android:name="com.doct24.doct24_android.view.authorization.DownloadFragment"
         android:label="DownloadFragment"
-        tools:layout="@layout/fragment_download"/>
+        tools:layout="@layout/fragment_download">
+        <action
+            android:id="@+id/action_downloadFragment_to_onboardingFragment"
+            app:destination="@id/OnboardingFragmentOne" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/OnboardingFragmentOne"
+        android:name="com.doct24.doct24_android.view.authorization.OnboardingFragmentOne"
+        android:label="OnboardingFragmentOne"
+        tools:layout="@layout/fragment_onboarding_one">
+        <action
+            android:id="@+id/action_downloadFragmentOne_to_onboardingFragmentTwo"
+            app:destination="@id/OnboardingFragmentTwo" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/OnboardingFragmentTwo"
+        android:name="com.doct24.doct24_android.view.authorization.OnboardingFragmentTwo"
+        android:label="OnboardingFragmentTwo"
+        tools:layout="@layout/fragment_onboarding_two">
+        <action
+            android:id="@+id/action_downloadFragmentTwo_to_onboardingFragmentThree"
+            app:destination="@id/OnboardingFragmentThree" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/OnboardingFragmentThree"
+        android:name="com.doct24.doct24_android.view.authorization.OnboardingFragmentThree"
+        android:label="OnboardingFragmentThree"
+        tools:layout="@layout/fragment_onboarding_three">
+        <action
+            android:id="@+id/action_downloadFragmentThree_to_fragmentEntrance"
+            app:destination="@id/EntranceFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/EntranceFragment"
+        android:name="com.doct24.doct24_android.view.authorization.EntranceFragment"
+        android:label="EntranceFragment"
+        tools:layout="@layout/fragment_entrance">
+        <action
+            android:id="@+id/action_EntranceFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+
 
 </navigation>

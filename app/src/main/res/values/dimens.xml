@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <dimen name="defaultPadding">16dp</dimen>
     <dimen name="cardMargin">8dp</dimen>
     <dimen name="cardImageSize">100dp</dimen>
@@ -15,5 +16,18 @@
     <dimen name="downloadFragmentLabelWidth">210dp</dimen>
     <dimen name="downloadFragmentLabelHeight">92dp</dimen>
     <dimen name="downloadFragmentMarginTop">8dp</dimen>
+    <dimen name="onboardingFragmentMarginTop">70sp</dimen>
+    <dimen name="onboardingFragmentMarginLeftRight">15sp</dimen>
+    <dimen name="onboardingFragmentMarginBottom">7sp</dimen>
+    <dimen name="onboardingFragmentMainImageHeight">290sp</dimen>
+    <dimen name="onboardingFragmentTextView1MarginTop">30sp</dimen>
+    <dimen name="onboardingFragmentTextView1TextSize">30sp</dimen>
+    <dimen name="onboardingFragmentTextView2Height">63sp</dimen>
+    <dimen name="onboardingFragmentBottomTextSize">20sp</dimen>
+    <dimen name="entranceFragmentMarginBottom">50sp</dimen>
+    <dimen name="entranceSpaceMarginBotton">1200px</dimen>
+    <dimen name="entranceFragmentMarginTop">0sp</dimen>
+    <dimen name="entranceFragmentTextSize">14sp</dimen>
+
 
 </resources>

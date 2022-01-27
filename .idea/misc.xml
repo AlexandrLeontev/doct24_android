@@ -4,6 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/IT/Git/doct24_android/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2203125" />
+        <entry key="..\:/IT/Git/doct24_android/app/src/main/res/drawable/button_main.xml" value="0.2203125" />
+        <entry key="..\:/IT/Git/doct24_android/app/src/main/res/drawable/button_main_shape.xml" value="0.2203125" />
+        <entry key="..\:/IT/Git/doct24_android/app/src/main/res/drawable/fields.xml" value="0.2203125" />
         <entry key="..\:/IT/Git/doct24_android/app/src/main/res/drawable/ic_weight.xml" value="0.2203125" />
         <entry key="..\:/IT/Git/doct24_android/app/src/main/res/drawable/ic_weight_background.xml" value="0.15648148148148147" />
         <entry key="..\:/IT/Git/doct24_android/app/src/main/res/drawable/ripple_effect.xml" value="0.2203125" />
@@ -12,10 +15,15 @@
         <entry key="..\:/IT/Git/doct24_android/app/src/main/res/layout/fragment_doctor_profile.xml" value="0.3162393162393162" />
         <entry key="..\:/IT/Git/doct24_android/app/src/main/res/layout/fragment_doctors_list.xml" value="0.20416666666666666" />
         <entry key="..\:/IT/Git/doct24_android/app/src/main/res/layout/fragment_doctors_specialisations_list.xml" value="0.1272644927536232" />
-        <entry key="..\:/IT/Git/doct24_android/app/src/main/res/layout/fragment_download.xml" value="0.23927765237020315" />
+        <entry key="..\:/IT/Git/doct24_android/app/src/main/res/layout/fragment_download.xml" value="0.22" />
+        <entry key="..\:/IT/Git/doct24_android/app/src/main/res/layout/fragment_entrance.xml" value="0.1" />
         <entry key="..\:/IT/Git/doct24_android/app/src/main/res/layout/fragment_home.xml" value="0.2" />
         <entry key="..\:/IT/Git/doct24_android/app/src/main/res/layout/fragment_how_works.xml" value="0.20416666666666666" />
         <entry key="..\:/IT/Git/doct24_android/app/src/main/res/layout/fragment_meetings.xml" value="0.1272644927536232" />
+        <entry key="..\:/IT/Git/doct24_android/app/src/main/res/layout/fragment_onboarding.xml" value="0.25" />
+        <entry key="..\:/IT/Git/doct24_android/app/src/main/res/layout/fragment_onboarding_one.xml" value="0.22" />
+        <entry key="..\:/IT/Git/doct24_android/app/src/main/res/layout/fragment_onboarding_three.xml" value="0.16" />
+        <entry key="..\:/IT/Git/doct24_android/app/src/main/res/layout/fragment_onboarding_two.xml" value="0.25" />
         <entry key="..\:/IT/Git/doct24_android/app/src/main/res/layout/fragment_patient_data.xml" value="0.22" />
         <entry key="..\:/IT/Git/doct24_android/app/src/main/res/layout/fragment_profile.xml" value="0.22" />
         <entry key="..\:/IT/Git/doct24_android/app/src/main/res/layout/fragment_vp_doctor_profile_about.xml" value="0.1272644927536232" />

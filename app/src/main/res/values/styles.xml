@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ButtonOnboardingsFramentsStyle">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginTop">@dimen/onboardingFragmentTextView1MarginTop</item>
+        <item name="android:layout_marginLeft">@dimen/onboardingFragmentMarginLeftRight</item>
+        <item name="android:layout_marginRight">@dimen/onboardingFragmentMarginLeftRight</item>
+        <item name="android:layout_marginBottom">@dimen/onboardingFragmentBottomTextSize</item>
+        <item name="android:textSize">@dimen/onboardingFragmentBottomTextSize</item>
+    </style>
+
+    <style name="ButtonEntranceStyle">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginLeft">@dimen/onboardingFragmentMarginLeftRight</item>
+        <item name="android:layout_marginRight">@dimen/onboardingFragmentMarginLeftRight</item>
+        <item name="android:textSize">@dimen/onboardingFragmentBottomTextSize</item>
+    </style>
+
+</resources>
