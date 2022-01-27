@@ -18,6 +18,7 @@ class MeetingsFragment : Fragment() {
     private val binding get() = _binding!!
     private lateinit var navController: NavController
     private val meetingsViewModel: MeetingsViewModel by viewModels()
+    private val meetingAdapter: MeetingListAdapter = MeetingListAdapter()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -26,16 +27,22 @@ class MeetingsFragment : Fragment() {
     ): View {
         _binding = FragmentMeetingsBinding.inflate(inflater, container, false)
         navController = NavHostFragment.findNavController(this)
-        meetingsViewModel.getLiveData().observe(viewLifecycleOwner, Observer { renderData(it) })
-        meetingsViewModel.getMeetingListFromLocalStorage()
+
         return binding.root
 
     }
 
-    private fun renderData(data: List<Meeting>) {
-
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.recyclerMeetingList.adapter = meetingAdapter
+        binding.meetingTabLayout
+        meetingsViewModel.getLiveData().observe(viewLifecycleOwner, Observer { renderData(it) })
+        meetingsViewModel.getMeetingListFromLocalStorage()
     }
 
+    private fun renderData(data: List<Meeting>) {
+        meetingAdapter.setData(data)
+    }
 
     override fun onDestroy() {
         super.onDestroy()
