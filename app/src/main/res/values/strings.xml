@@ -74,6 +74,7 @@
     <string name="adultDoctor">Взрослый врач</string>
     <string name="familyDoctor">Семейный врач</string>
     <string name="backToDoctorsList">Выбор врача</string>
+    <string name="backToDoctorProfile">Профиль врача</string>
     <string name="chat">Чат</string>
     <string name="video">Видео</string>
     <string name="availableEntry">Доступная запись</string>
@@ -84,8 +85,9 @@
     <string name="professionality">Профессионализм</string>
     <string name="responsibility">Ответственность</string>
     <string name="accurasy">Внимательность</string>
-    <string name="punctualnost">Пунктуальность</string>
+    <string name="punctuality">Пунктуальность</string>
     <string name="leaveFeedback">Написать отзыв</string>
+    <string name="sendFeedback">Отправить отзыв</string>
     <string name="sign">Записаться</string>
     <string name="appointmentText">Запись</string>
     <string name="aboutDoctor">О враче</string>
@@ -99,4 +101,8 @@
     <string name="doctorLocationInput">Россия, Москва</string>
     <string name="doctorSpecialityBack">Выбор специализации</string>
     <string name="backToHome">На главную страницу</string>
+    <string name="doctorProfileEducationInputText">1966 - 1970 гг. - АГМИ г. Алматы, лечебный факультет. \n1970 - 1972 гг. - военно-медицинский факультет при Томском медицинском институте. Военный врач, лечебно-профилактическое дело. \n1977 - 1979 гг. - военно-медицинская академия им. С.М. Кирова, г. Ленинград. Офицер с высшим военным образованием, врач-терапевт. Лечебно-профилактическое обеспечение войск.</string>
+    <string name="doctorProfileExperienceInputText">1986-1993 гг. - начальник гастроэнтерологического отделения окружного госпиталя (Алма-Ата) \n1993-1995 гг. - начальник гастроэнтерологического отделения ЦВКГ МО РК (Алматы) \n1995-2003 гг. - начальник эндоскопического отделения ЦВКГ МО РК (Алматы) \n2003-наст. время - гастроэнтеролог-эндоскопист Республиканского клинического госпиталя для инвалидов ВОВ (Алматы) \n2016-наст. время - гастроэнтеролог-эндоскопист GASTROCLINIC.</string>
+    <string name="doctorProfileHealingInputText">гастрит (функциональная диспепсия), холецистит, язвенная болезнь желудка, язвенная болезнь двенадцатиперстной кишки, запор, колит, энтероколит, дискенезия желчевыводящих путей (ДЖВП), гастроэзофагеальная рефлюксная болезнь, эзофагит, панкреатит</string>
+    <string name="doctorProfileSeniorityInputText">10 лет</string>
 </resources>

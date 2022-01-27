@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="?attr/actionBarSize">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitStart"
+                android:src="@drawable/doctor_feedback_bkg" />
+
+            <Space
+                android:id="@+id/spaceDoctorFeedbackFragment"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/doctorFeedbackBackButton"
+                style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="0dp"
+                android:text="@string/backToDoctorProfile"
+                android:textColor="@color/mainGreen"
+                android:textSize="@dimen/defTextSize"
+                app:icon="@drawable/ic_baseline_arrow_back"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/spaceDoctorFeedbackFragment" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/doctorProfilePhoto"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="35dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/doctorFeedbackBackButton"
+                app:shapeAppearanceOverlay="@style/circleImageView" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/doctorFeedbackBackGuideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.46" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/doctorProfileName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/doctorName"
+                android:textColor="@color/headlineColor"
+                android:textSize="@dimen/titleSize"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/doctorFeedbackBackGuideline"
+                app:layout_constraintTop_toTopOf="@id/doctorProfilePhoto"
+                app:layout_constraintBottom_toTopOf="@+id/doctorProfileSpecInput"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/doctorProfileSpecInput"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/doctorSpecialityInput"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/doctorFeedbackBackGuideline"
+                app:layout_constraintTop_toBottomOf="@id/doctorProfileName" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/yourRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="Ваша оценка"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/doctorProfilePhoto"
+                android:layout_marginTop="44dp"/>
+
+            <RatingBar
+                android:id="@+id/doctorFeedbackRatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:rating="4.7"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/yourRating"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/professionalText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Профессиональные качества врача"
+                app:layout_constraintTop_toBottomOf="@id/doctorFeedbackRatingBar"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="24dp"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textProfessionalism"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/professionality"
+                android:textColor="@color/basicGrey"
+                android:textSize="12sp"
+                app:layout_constraintTop_toBottomOf="@id/professionalText"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+            <ProgressBar
+                android:id="@+id/progressProfessionalism"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:progressDrawable="@drawable/doctor_profile_progress_bar"
+                android:progressTint="@color/progressBarColor"
+                app:layout_constraintTop_toBottomOf="@id/textProfessionalism"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textResponsibility"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/cardMargin"
+                android:text="@string/responsibility"
+                android:textColor="@color/basicGrey"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/progressProfessionalism"/>
+
+            <ProgressBar
+                android:id="@+id/progressResponsibility"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:progressDrawable="@drawable/doctor_profile_progress_bar"
+                android:progressTint="@color/progressBarColor"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textResponsibility"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textAttentiveness"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/cardMargin"
+                android:text="@string/accurasy"
+                android:textColor="@color/basicGrey"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/progressResponsibility"
+                />
+
+            <ProgressBar
+                android:id="@+id/progressAttentiveness"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:progressDrawable="@drawable/doctor_profile_progress_bar"
+                android:progressTint="@color/progressBarColor"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textAttentiveness"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textPunctuality"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/cardMargin"
+                android:text="@string/punctuality"
+                android:textColor="@color/basicGrey"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/progressAttentiveness"/>
+
+            <ProgressBar
+                android:id="@+id/progressPunctuality"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:progressDrawable="@drawable/doctor_profile_progress_bar"
+                android:progressTint="@color/progressBarColor"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textPunctuality"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Отзыв"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@id/progressPunctuality"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="0/1000 символов"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@id/progressPunctuality"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/doctorFeedbackText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                android:backgroundTintMode="screen"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/progressPunctuality"
+                android:layout_marginTop="44dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/doctorFeedbackTextInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="\n123 \n123 \n \n " />
+            </androidx.cardview.widget.CardView>
+
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/sendFeedbackButton"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/defaultPadding"
+                android:text="@string/sendFeedback"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:cornerRadius="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/doctorFeedbackText" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</FrameLayout>

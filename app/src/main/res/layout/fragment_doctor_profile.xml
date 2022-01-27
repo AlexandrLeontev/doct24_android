@@ -188,7 +188,7 @@
             <include
                 android:layout_marginTop="10dp"
                 android:id="@+id/doctorProfileContainer"
-                layout="@layout/fragment_vp_doctor_profile_feedback"
+                layout="@layout/fragment_vp_doctor_profile_about"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toEndOf="parent"
