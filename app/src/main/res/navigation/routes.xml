@@ -30,7 +30,7 @@
     </fragment>
     <fragment
         android:id="@+id/meetingsFragment"
-        android:name="com.doct24.doct24_android.view.MeetingsFragment"
+        android:name="com.doct24.doct24_android.view.meeting.MeetingsFragment"
         android:label="MeetingsFragment"
         tools:layout="@layout/fragment_meetings"/>
 
