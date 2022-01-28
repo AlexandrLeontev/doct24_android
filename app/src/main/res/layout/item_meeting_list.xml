@@ -16,6 +16,7 @@
             android:layout_height="wrap_content"
             android:text="@string/date"
             android:textSize="@dimen/defTextSize"
+            android:textColor="@color/basicGrey"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
