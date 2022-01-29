@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.doct24.doct24_android.R
 import com.doct24.doct24_android.databinding.ItemMeetingListBinding
+import com.doct24.doct24_android.model.Doctor
 import com.doct24.doct24_android.model.Meeting
 import com.squareup.picasso.Picasso
 
@@ -14,6 +15,7 @@ class MeetingListAdapter : RecyclerView.Adapter<MeetingListAdapter.MeetingListVi
 
     private var meetingList: List<Meeting> = listOf()
     private var isFuture: Boolean = true
+    private var onItemViewClickListener: MeetingsAdapterClickListener? = null
 
     fun setData(data: List<Meeting>, isFuture: Boolean) {
         this.isFuture = isFuture
@@ -34,6 +36,10 @@ class MeetingListAdapter : RecyclerView.Adapter<MeetingListAdapter.MeetingListVi
         holder.bind(meetingList[position])
     }
 
+    fun setAdapterOnClickListener(listener: MeetingsAdapterClickListener) {
+        onItemViewClickListener = listener
+    }
+
     override fun getItemCount(): Int {
         return meetingList.size
     }
@@ -48,6 +54,7 @@ class MeetingListAdapter : RecyclerView.Adapter<MeetingListAdapter.MeetingListVi
                     .load(meeting.doctor.avatar)
                     .into(meetingListDoctorPhoto)
                 meetingListDoctorName.text = docName
+                meetingListDoctorName.setOnClickListener { onItemViewClickListener?.onDoctorClick(meeting) }
                 meetingListDoctorSpec.text = meeting.doctor.specialization
                 meetingListDate.text = meeting.date
             }
@@ -55,7 +62,6 @@ class MeetingListAdapter : RecyclerView.Adapter<MeetingListAdapter.MeetingListVi
                 with(binding) {
                     meetingListStartButton.visibility = View.VISIBLE
                     meetingListChangeButton.text = resources.getText(R.string.change)
-
                     meetingListTime.text = meeting.time
                     meetingListTime.setTextColor(resources.getColor(R.color.mainGreen))
                     meetingListPaidStatus.visibility = View.VISIBLE
@@ -80,5 +86,12 @@ class MeetingListAdapter : RecyclerView.Adapter<MeetingListAdapter.MeetingListVi
                 }
             }
         }
+    }
+
+    interface MeetingsAdapterClickListener {
+        fun onButtonChangeClick(meeting: Meeting)
+        fun onDoctorClick(meeting: Meeting)
+        fun onPayClick()
+        fun onStartClick()
     }
 }

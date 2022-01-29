@@ -10,11 +10,13 @@ import androidx.lifecycle.Observer
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
+import com.doct24.doct24_android.R
 import com.doct24.doct24_android.databinding.FragmentMeetingsBinding
 import com.doct24.doct24_android.model.Meeting
+import com.doct24.doct24_android.view.doctor.DoctorProfileFragment
 import com.google.android.material.tabs.TabLayout
 
-class MeetingsFragment : Fragment() {
+class MeetingsFragment : Fragment(), MeetingListAdapter.MeetingsAdapterClickListener{
 
     private var _binding: FragmentMeetingsBinding? = null
     private val binding get() = _binding!!
@@ -37,6 +39,7 @@ class MeetingsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.meetingsBackButton.setOnClickListener { findNavController().popBackStack() }
         binding.recyclerMeetingList.adapter = meetingAdapter
+        meetingAdapter.setAdapterOnClickListener(this)
         binding.meetingTabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab?) {
                 when (tab?.position) {
@@ -74,5 +77,21 @@ class MeetingsFragment : Fragment() {
     companion object {
         private const val FUTURE = 0
         private const val PAST = 1
+    }
+
+    override fun onButtonChangeClick(meeting: Meeting) {
+    }
+
+    override fun onDoctorClick(meeting: Meeting) {
+        findNavController().navigate(
+            R.id.action_meetingsFragment_to_doctorProfileFragment,
+            Bundle().apply
+            { putParcelable(DoctorProfileFragment.BUNDLE_DOCTOR, meeting.doctor) })
+    }
+
+    override fun onPayClick() {
+    }
+
+    override fun onStartClick() {
     }
 }

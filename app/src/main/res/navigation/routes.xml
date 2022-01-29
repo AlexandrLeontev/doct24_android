@@ -32,7 +32,11 @@
         android:id="@+id/meetingsFragment"
         android:name="com.doct24.doct24_android.view.meeting.MeetingsFragment"
         android:label="MeetingsFragment"
-        tools:layout="@layout/fragment_meetings"/>
+        tools:layout="@layout/fragment_meetings">
+        <action
+            android:id="@+id/action_meetingsFragment_to_doctorProfileFragment"
+            app:destination="@id/doctorProfileFragment" />
+    </fragment>
 
 
         tools:layout="@layout/fragment_meetings" />
