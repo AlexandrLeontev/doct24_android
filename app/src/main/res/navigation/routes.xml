@@ -89,12 +89,12 @@
         tools:layout="@layout/fragment_patient_data" />
 
     <fragment
-        android:id="@+id/DownloadFragment"
-        android:name="com.doct24.doct24_android.view.authorization.DownloadFragment"
-        android:label="DownloadFragment"
-        tools:layout="@layout/fragment_download">
+        android:id="@+id/DownloadActivity"
+        android:name="com.doct24.doct24_android.view.authorization.DownloadActivity"
+        android:label="DownloadActivity"
+        tools:layout="@layout/activity_download">
         <action
-            android:id="@+id/action_downloadFragment_to_onboardingFragment"
+            android:id="@+id/action_downloadActivity_to_onboardingFragment"
             app:destination="@id/OnboardingFragmentOne" />
     </fragment>
 
