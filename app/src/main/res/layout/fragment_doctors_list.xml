@@ -35,7 +35,7 @@
         android:layout_height="wrap_content"
         android:hint="@string/search"
         app:boxBackgroundColor="@color/lightGray"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/filterButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/doctorProfileBackButton"
         app:startIconCheckable="true"
@@ -47,6 +47,16 @@
             android:inputType="text" />
 
     </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/filterButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_button_filter"
+        app:layout_constraintBottom_toTopOf="@id/doctorListTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/searchInputLayout"
+        app:layout_constraintTop_toBottomOf="@id/doctorProfileBackButton" />
 
 
     <com.google.android.material.textview.MaterialTextView

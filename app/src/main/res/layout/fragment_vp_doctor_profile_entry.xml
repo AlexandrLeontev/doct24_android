@@ -1,140 +1,373 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:padding="@dimen/defaultPadding">
 
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/buttonDoctorProfileChat"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/cardMargin"
-        android:layout_marginEnd="@dimen/cardMargin"
-        android:elevation="0dp"
-        app:strokeColor="@color/basicGrey"
-        app:strokeWidth="1dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/buttonDoctorProfileVideo"
-        app:layout_constraintTop_toTopOf="parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="@dimen/defaultPadding">
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/buttonDoctorProfileChat"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="@dimen/cardMargin"
+            android:layout_marginEnd="@dimen/cardMargin"
+            android:elevation="0dp"
+            app:layout_constraintEnd_toStartOf="@id/buttonDoctorProfileVideo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="@color/basicGrey"
+            app:strokeWidth="1dp">
 
             <ImageView
                 android:id="@+id/imageDoctorProfileChat"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_baseline_chat_24"
-                app:tint="@color/secondaryYellow"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"/>
-            <com.google.android.material.textview.MaterialTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/chat"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                android:layout_marginStart="@dimen/cardMargin"
-                app:layout_constraintStart_toEndOf="@id/imageDoctorProfileChat"/>
+                android:layout_height="match_parent"
+                android:layout_gravity="start|center_vertical"
+                android:layout_margin="@dimen/cardMargin"
+                android:src="@drawable/ic_baseline_chat_24" />
 
             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/chatText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center|start"
+                android:layout_marginStart="40dp"
+                android:text="@string/chat" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/chatPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:layout_margin="@dimen/cardMargin"
                 android:text="3500 Р"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                android:layout_marginStart="@dimen/cardMargin"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:textStyle="bold"
-                android:textColor="@color/mainGreen"/>
+                android:textColor="@color/mainGreen"
+                android:textStyle="bold" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            <!--            <ImageView-->
+            <!--                android:id="@+id/imageDoctorProfileChat"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:src="@drawable/ic_baseline_chat_24"-->
+            <!--                app:tint="@color/secondaryYellow"-->
+            <!--                app:layout_constraintTop_toTopOf="buttonDoctorProfileChat"-->
+            <!--                app:layout_constraintBottom_toBottomOf="buttonDoctorProfileChat"-->
+            <!--                app:layout_constraintStart_toStartOf="buttonDoctorProfileChat"-->
+            <!--                app:layout_constraintEnd_toStartof="chatText"-->
+            <!--                />-->
+            <!--        -->
+            <!--            <com.google.android.material.textview.MaterialTextView-->
+            <!--                android:id="@+id/chatText"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:text="@string/chat"-->
+            <!--                app:layout_constraintTop_toTopOf="buttonDoctorProfileChat"-->
+            <!--                app:layout_constraintBottom_toBottomOf="buttonDoctorProfileChat"-->
+            <!--                android:layout_marginStart="@dimen/cardMargin"-->
+            <!--                app:layout_constraintStart_toEndOf="@id/imageDoctorProfileChat"-->
+            <!--                />-->
 
-    </com.google.android.material.card.MaterialCardView>
+            <!--            <com.google.android.material.textview.MaterialTextView-->
+            <!--                android:id="@+id/chatPrice"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:text="3500 Р"-->
+            <!--                app:layout_constraintTop_toTopOf="parent"-->
+            <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--                android:layout_marginStart="@dimen/cardMargin"-->
+            <!--                app:layout_constraintEnd_toEndOf="parent"-->
+            <!--                android:textStyle="bold"-->
+            <!--                android:textColor="@color/mainGreen"/>-->
 
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/buttonDoctorProfileVideo"
-        android:layout_width="0dp"
-        android:elevation="0dp"
-        app:strokeColor="@color/basicGrey"
-        app:strokeWidth="1dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/cardMargin"
-        android:layout_marginEnd="@dimen/cardMargin"
-        app:layout_constraintStart_toEndOf="@id/buttonDoctorProfileChat"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        </com.google.android.material.card.MaterialCardView>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="@dimen/defaultPadding">
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/buttonDoctorProfileVideo"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="@dimen/cardMargin"
+            android:layout_marginEnd="@dimen/cardMargin"
+            android:elevation="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/buttonDoctorProfileChat"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="@color/basicGrey"
+            app:strokeWidth="1dp">
 
             <ImageView
                 android:id="@+id/imageDoctorProfileVideo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|start"
+                android:layout_margin="@dimen/cardMargin"
                 android:src="@drawable/ic_baseline_videocam_24"
-                app:tint="@color/secondaryYellow"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"/>
-            <com.google.android.material.textview.MaterialTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/video"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                android:layout_marginStart="@dimen/cardMargin"
-                app:layout_constraintStart_toEndOf="@id/imageDoctorProfileVideo"/>
+                app:tint="@color/secondaryYellow" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|start"
+                android:layout_marginStart="40dp"
+                android:text="@string/video" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginStart="@dimen/cardMargin"
                 android:text="4500 Р"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                android:layout_marginStart="@dimen/cardMargin"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:textStyle="bold"
-                android:textColor="@color/mainGreen"/>
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                android:textColor="@color/mainGreen"
+                android:textStyle="bold" />
 
-    </com.google.android.material.card.MaterialCardView>
+        </com.google.android.material.card.MaterialCardView>
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/textDoctorProfileAvailable"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/buttonDoctorProfileChat"
-        android:layout_marginTop="@dimen/defaultPadding"
-        android:textStyle="bold"
-        android:textSize="@dimen/titleSize"
-        android:text="@string/availableEntry"/>
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textDoctorProfileAvailable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/defaultPadding"
+            android:text="@string/availableEntry"
+            android:textSize="@dimen/titleSize"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/buttonDoctorProfileChat" />
 
-    <DatePicker
-        android:id="@+id/doctorProfileDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/defaultPadding"
-        app:layout_constraintTop_toBottomOf="@id/textDoctorProfileAvailable"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/monthEntry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="somemonth"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textDoctorProfileAvailable" />
 
-    <com.google.android.material.button.MaterialButton
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/sign"
-        android:padding="@dimen/defaultPadding"
-        android:backgroundTint="@color/mainGreen"
-        style="@style/Widget.MaterialComponents.Button"
-        android:textSize="20sp"
-        app:layout_constraintTop_toBottomOf="@id/doctorProfileDate"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Выбрать дату"
+            app:layout_constraintEnd_toStartOf="@id/iconDoctorProfileCalendar"
+            app:layout_constraintTop_toBottomOf="@+id/textDoctorProfileAvailable" />
+
+        <ImageView
+            android:id="@+id/iconDoctorProfileCalendar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_calendar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textDoctorProfileAvailable" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/weekEntry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/monthEntry">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="43dp"
+                    android:layout_height="83dp"
+                    android:layout_margin="6dp"
+                    app:cardBackgroundColor="@color/lightGray"
+                    app:cardCornerRadius="15dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|center_horizontal"
+                        android:layout_margin="@dimen/cardMargin"
+                        android:text="Пн" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/mondayDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:layout_margin="@dimen/cardMargin"
+                        android:text="01" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="43dp"
+                    android:layout_height="83dp"
+                    android:layout_margin="6dp"
+                    app:cardBackgroundColor="@color/secondaryBlue"
+                    app:cardCornerRadius="15dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|center_horizontal"
+                        android:layout_margin="@dimen/cardMargin"
+                        android:text="Вт" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tuesdayDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:layout_margin="@dimen/cardMargin"
+                        android:text="02" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="43dp"
+                    android:layout_height="83dp"
+                    android:layout_margin="6dp"
+                    app:cardBackgroundColor="@color/lightGray"
+                    app:cardCornerRadius="15dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|center_horizontal"
+                        android:layout_margin="@dimen/cardMargin"
+                        android:text="Ср" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/wednesdayDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:layout_margin="@dimen/cardMargin"
+                        android:text="03" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="43dp"
+                    android:layout_height="83dp"
+                    android:layout_margin="5dp"
+                    app:cardBackgroundColor="@color/lightGray"
+                    app:cardCornerRadius="15dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|center_horizontal"
+                        android:layout_margin="@dimen/cardMargin"
+                        android:text="Чт" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/thursdayDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:layout_margin="@dimen/cardMargin"
+                        android:text="04" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="43dp"
+                    android:layout_height="83dp"
+                    android:layout_margin="5dp"
+                    app:cardBackgroundColor="@color/secondaryBlue"
+                    app:cardCornerRadius="15dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|center_horizontal"
+                        android:layout_margin="@dimen/cardMargin"
+                        android:text="Пт" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/fridayDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:layout_margin="@dimen/cardMargin"
+                        android:text="05" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="43dp"
+                    android:layout_height="83dp"
+                    android:layout_margin="5dp"
+                    app:cardBackgroundColor="@color/secondaryBlue"
+                    app:cardCornerRadius="15dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|center_horizontal"
+                        android:layout_margin="@dimen/cardMargin"
+                        android:text="Сб" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/saturdayDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:layout_margin="@dimen/cardMargin"
+                        android:text="06" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="43dp"
+                    android:layout_height="83dp"
+                    android:layout_margin="5dp"
+                    app:cardBackgroundColor="@color/secondaryBlue"
+                    app:cardCornerRadius="15dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|center_horizontal"
+                        android:layout_margin="@dimen/cardMargin"
+                        android:text="Вт" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/sundayDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:layout_margin="@dimen/cardMargin"
+                        android:text="07" />
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/timeRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintTop_toBottomOf="@id/weekEntry"
+            app:spanCount="4"
+            tools:listitem="@layout/item_time_entry" />
+
+
+        <!--    <DatePicker-->
+        <!--        android:id="@+id/doctorProfileDate"-->
+        <!--        android:layout_width="wrap_content"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        android:layout_marginTop="@dimen/defaultPadding"-->
+        <!--        app:layout_constraintEnd_toEndOf="parent"-->
+        <!--        app:layout_constraintStart_toStartOf="parent"-->
+        <!--        app:layout_constraintTop_toBottomOf="@id/textDoctorProfileAvailable" />-->
+
+        <!--    <com.google.android.material.button.MaterialButton-->
+        <!--        style="@style/Widget.MaterialComponents.Button"-->
+        <!--        android:layout_width="match_parent"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        android:backgroundTint="@color/mainGreen"-->
+        <!--        android:padding="@dimen/defaultPadding"-->
+        <!--        android:text="@string/sign"-->
+        <!--        android:textSize="20sp"-->
+        <!--        app:layout_constraintEnd_toEndOf="parent"-->
+        <!--        app:layout_constraintStart_toStartOf="parent"-->
+        <!--        app:layout_constraintTop_toBottomOf="@id/doctorProfileDate" />-->
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
