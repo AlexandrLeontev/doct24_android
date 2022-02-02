@@ -58,7 +58,8 @@
         <item name="cornerSize">50%</item>
     </style>
 
-    <style name="MyRatingBar" parent="Widget.AppCompat.RatingBar.Indicator">
-        <item name="colorControlNormal">@color/secondaryYellow</item>
+    <style name="MyRatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@android:color/holo_green_light</item>
+        <item name="colorControlActivated">@android:color/holo_orange_dark</item>
     </style>
 </resources>

@@ -16,7 +16,9 @@
             android:layout_height="55dp"
             android:layout_marginStart="@dimen/cardMargin"
             android:layout_marginEnd="@dimen/cardMargin"
+            android:clickable="true"
             android:elevation="0dp"
+            app:cardBackgroundColor="@color/white"
             app:layout_constraintEnd_toStartOf="@id/buttonDoctorProfileVideo"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -49,41 +51,6 @@
                 android:textColor="@color/mainGreen"
                 android:textStyle="bold" />
 
-            <!--            <ImageView-->
-            <!--                android:id="@+id/imageDoctorProfileChat"-->
-            <!--                android:layout_width="wrap_content"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:src="@drawable/ic_baseline_chat_24"-->
-            <!--                app:tint="@color/secondaryYellow"-->
-            <!--                app:layout_constraintTop_toTopOf="buttonDoctorProfileChat"-->
-            <!--                app:layout_constraintBottom_toBottomOf="buttonDoctorProfileChat"-->
-            <!--                app:layout_constraintStart_toStartOf="buttonDoctorProfileChat"-->
-            <!--                app:layout_constraintEnd_toStartof="chatText"-->
-            <!--                />-->
-            <!--        -->
-            <!--            <com.google.android.material.textview.MaterialTextView-->
-            <!--                android:id="@+id/chatText"-->
-            <!--                android:layout_width="wrap_content"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:text="@string/chat"-->
-            <!--                app:layout_constraintTop_toTopOf="buttonDoctorProfileChat"-->
-            <!--                app:layout_constraintBottom_toBottomOf="buttonDoctorProfileChat"-->
-            <!--                android:layout_marginStart="@dimen/cardMargin"-->
-            <!--                app:layout_constraintStart_toEndOf="@id/imageDoctorProfileChat"-->
-            <!--                />-->
-
-            <!--            <com.google.android.material.textview.MaterialTextView-->
-            <!--                android:id="@+id/chatPrice"-->
-            <!--                android:layout_width="wrap_content"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:text="3500 Р"-->
-            <!--                app:layout_constraintTop_toTopOf="parent"-->
-            <!--                app:layout_constraintBottom_toBottomOf="parent"-->
-            <!--                android:layout_marginStart="@dimen/cardMargin"-->
-            <!--                app:layout_constraintEnd_toEndOf="parent"-->
-            <!--                android:textStyle="bold"-->
-            <!--                android:textColor="@color/mainGreen"/>-->
-
         </com.google.android.material.card.MaterialCardView>
 
         <com.google.android.material.card.MaterialCardView
@@ -92,7 +59,9 @@
             android:layout_height="55dp"
             android:layout_marginStart="@dimen/cardMargin"
             android:layout_marginEnd="@dimen/cardMargin"
+            android:clickable="true"
             android:elevation="0dp"
+            app:cardBackgroundColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/buttonDoctorProfileChat"
             app:layout_constraintTop_toTopOf="parent"
@@ -145,21 +114,20 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/textDoctorProfileAvailable" />
 
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/textView"
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/doctorProfileEntryDateChoose"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:elevation="0dp"
             android:text="Выбрать дату"
-            app:layout_constraintEnd_toStartOf="@id/iconDoctorProfileCalendar"
-            app:layout_constraintTop_toBottomOf="@+id/textDoctorProfileAvailable" />
-
-        <ImageView
-            android:id="@+id/iconDoctorProfileCalendar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_calendar"
+            app:cornerRadius="25dp"
+            app:icon="@drawable/ic_calendar"
+            app:iconGravity="end"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/textDoctorProfileAvailable" />
+            app:layout_constraintTop_toBottomOf="@+id/textDoctorProfileAvailable"
+            app:layout_constraintBottom_toTopOf="@id/weekEntry"
+            app:strokeWidth="1dp"
+            app:strokeColor="@color/basicGrey"/>
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/weekEntry"
@@ -167,15 +135,16 @@
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/monthEntry">
+            app:layout_constraintTop_toBottomOf="@id/doctorProfileEntryDateChoose">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:gravity="center_horizontal"
                 android:orientation="horizontal">
 
                 <com.google.android.material.card.MaterialCardView
-                    android:layout_width="43dp"
+                    android:layout_width="42dp"
                     android:layout_height="83dp"
                     android:layout_margin="6dp"
                     app:cardBackgroundColor="@color/lightGray"
@@ -198,7 +167,7 @@
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
-                    android:layout_width="43dp"
+                    android:layout_width="42dp"
                     android:layout_height="83dp"
                     android:layout_margin="6dp"
                     app:cardBackgroundColor="@color/secondaryBlue"
@@ -221,7 +190,7 @@
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
-                    android:layout_width="43dp"
+                    android:layout_width="42dp"
                     android:layout_height="83dp"
                     android:layout_margin="6dp"
                     app:cardBackgroundColor="@color/lightGray"
@@ -244,9 +213,9 @@
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
-                    android:layout_width="43dp"
+                    android:layout_width="42dp"
                     android:layout_height="83dp"
-                    android:layout_margin="5dp"
+                    android:layout_margin="6dp"
                     app:cardBackgroundColor="@color/lightGray"
                     app:cardCornerRadius="15dp">
 
@@ -267,9 +236,9 @@
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
-                    android:layout_width="43dp"
+                    android:layout_width="42dp"
                     android:layout_height="83dp"
-                    android:layout_margin="5dp"
+                    android:layout_margin="6dp"
                     app:cardBackgroundColor="@color/secondaryBlue"
                     app:cardCornerRadius="15dp">
 
@@ -290,9 +259,9 @@
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
-                    android:layout_width="43dp"
+                    android:layout_width="42dp"
                     android:layout_height="83dp"
-                    android:layout_margin="5dp"
+                    android:layout_margin="6dp"
                     app:cardBackgroundColor="@color/secondaryBlue"
                     app:cardCornerRadius="15dp">
 
@@ -313,9 +282,9 @@
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
-                    android:layout_width="43dp"
+                    android:layout_width="42dp"
                     android:layout_height="83dp"
-                    android:layout_margin="5dp"
+                    android:layout_margin="6dp"
                     app:cardBackgroundColor="@color/secondaryBlue"
                     app:cardCornerRadius="15dp">
 
@@ -349,25 +318,16 @@
             tools:listitem="@layout/item_time_entry" />
 
 
-        <!--    <DatePicker-->
-        <!--        android:id="@+id/doctorProfileDate"-->
-        <!--        android:layout_width="wrap_content"-->
-        <!--        android:layout_height="wrap_content"-->
-        <!--        android:layout_marginTop="@dimen/defaultPadding"-->
-        <!--        app:layout_constraintEnd_toEndOf="parent"-->
-        <!--        app:layout_constraintStart_toStartOf="parent"-->
-        <!--        app:layout_constraintTop_toBottomOf="@id/textDoctorProfileAvailable" />-->
+        <DatePicker
+            android:id="@+id/doctorProfileDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/defaultPadding"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <!--    <com.google.android.material.button.MaterialButton-->
-        <!--        style="@style/Widget.MaterialComponents.Button"-->
-        <!--        android:layout_width="match_parent"-->
-        <!--        android:layout_height="wrap_content"-->
-        <!--        android:backgroundTint="@color/mainGreen"-->
-        <!--        android:padding="@dimen/defaultPadding"-->
-        <!--        android:text="@string/sign"-->
-        <!--        android:textSize="20sp"-->
-        <!--        app:layout_constraintEnd_toEndOf="parent"-->
-        <!--        app:layout_constraintStart_toStartOf="parent"-->
-        <!--        app:layout_constraintTop_toBottomOf="@id/doctorProfileDate" />-->
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

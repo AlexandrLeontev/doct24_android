@@ -1,6 +1,8 @@
 package com.doct24.doct24_android.view.doctor
 
+import android.animation.ObjectAnimator
 import android.os.Bundle
+import android.renderscript.ScriptGroup
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,7 +15,11 @@ import com.doct24.doct24_android.databinding.FragmentDoctorProfileBinding
 import com.doct24.doct24_android.databinding.FragmentDoctorsListBinding
 import com.doct24.doct24_android.model.Doctor
 import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.fragment_doctor_profile.*
 import kotlinx.android.synthetic.main.fragment_vp_doctor_profile_entry.*
+import androidx.viewpager.widget.ViewPager
+import com.doct24.doct24_android.R
+
 
 class DoctorProfileFragment : Fragment() {
 
@@ -44,6 +50,22 @@ class DoctorProfileFragment : Fragment() {
             findNavController().popBackStack()
         }
         init()
+        binding.doctorProfileAppointment.setOnClickListener {
+            binding.doctorProfileEntryContainer.root.visibility = View.VISIBLE
+            binding.doctorProfileFeedbackContainer.root.visibility = View.GONE
+            binding.doctorProfileAboutContainer.root.visibility = View.GONE
+        }
+        binding.doctorProfileAbout.setOnClickListener {
+            binding.doctorProfileAboutContainer.root.visibility = View.VISIBLE
+            binding.doctorProfileFeedbackContainer.root.visibility = View.GONE
+            binding.doctorProfileEntryContainer.root.visibility = View.GONE
+        }
+        binding.doctorProfileFeedback.setOnClickListener {
+            binding.doctorProfileFeedbackContainer.root.visibility = View.VISIBLE
+            binding.doctorProfileAboutContainer.root.visibility = View.GONE
+            binding.doctorProfileEntryContainer.root.visibility = View.GONE
+        }
+
     }
 
     private fun init() {
@@ -55,6 +77,22 @@ class DoctorProfileFragment : Fragment() {
             doctorProfileAgeInput.text = "${doctor.age} лет"
             doctorProfileSpecInput.text = doctor.specialization
             doctorProfileLocationInput.text = "${doctor.country}, ${doctor.city}"
+
+
+            doctorProfileFeedbackContainer.root.visibility = View.VISIBLE
+            doctorProfileFeedbackContainer.progressProfessionality.progress = 80
+            doctorProfileFeedbackContainer.progressResponsibility.progress = 90
+            doctorProfileFeedbackContainer.progressAccurasy.progress = 75
+            doctorProfileFeedbackContainer.progressPunctuality.progress = 60
+
+
+            doctorProfileFeedbackContainer.doctorProfileRatingBar.rating = 4.75f
+            doctorProfileFeedbackContainer.doctorProfileRatingText.text = doctorProfileFeedbackContainer.doctorProfileRatingBar.rating.toString()
+
+            doctorProfileEntryContainer.buttonDoctorProfileChat.setOnClickListener {
+//                buttonDoctorProfileChat.cardBackgroundColor = R.color.color_name
+            }
+
         }
     }
 

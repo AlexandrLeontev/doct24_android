@@ -13,20 +13,24 @@
 
         <androidx.appcompat.widget.AppCompatRatingBar
             android:id="@+id/doctorProfileRatingBar"
-            style="?android:attr/ratingBarStyleIndicator"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:numStars="5"
+            android:rating="3"
+            style="@style/Widget.AppCompat.RatingBar.Indicator"
             android:theme="@style/MyRatingBar"
-            android:rating="4.7"/>
+
+
+
+             />
 
         <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/doctorProfileRatingText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end|center"
-            android:layout_marginStart="200dp"
-            android:text="4.7/5"
-            android:textSize="25sp"/>
+            android:layout_marginStart="250dp"
+            android:text="3/5"
+            android:textSize="25sp" />
     </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.textview.MaterialTextView
@@ -36,13 +40,21 @@
         android:textColor="@color/basicGrey"
         android:textSize="12sp" />
 
-    <ProgressBar
-        android:id="@+id/progressProfessionality"
-        style="?android:attr/progressBarStyleHorizontal"
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:progressDrawable="@drawable/doctor_profile_progress_bar"
-        android:progressTint="@color/progressBarColor" />
+        app:cardCornerRadius="15dp">
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/progressProfessionality"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/secondaryBlue"
+            app:indicatorColor="@color/progressBarColor"
+            app:trackCornerRadius="15dp"
+            app:trackThickness="16dp" />
+    </com.google.android.material.card.MaterialCardView>
+
 
     <com.google.android.material.textview.MaterialTextView
         android:layout_width="wrap_content"
@@ -52,13 +64,21 @@
         android:textColor="@color/basicGrey"
         android:textSize="12sp" />
 
-    <ProgressBar
-        android:id="@+id/progressResponsibility"
-        style="?android:attr/progressBarStyleHorizontal"
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:progressDrawable="@drawable/doctor_profile_progress_bar"
-        android:progressTint="@color/progressBarColor" />
+        app:cardCornerRadius="15dp">
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/progressResponsibility"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/secondaryBlue"
+            app:indicatorColor="@color/progressBarColor"
+            app:trackCornerRadius="15dp"
+            app:trackThickness="16dp" />
+    </com.google.android.material.card.MaterialCardView>
+
 
     <com.google.android.material.textview.MaterialTextView
         android:layout_width="wrap_content"
@@ -68,13 +88,20 @@
         android:textColor="@color/basicGrey"
         android:textSize="12sp" />
 
-    <ProgressBar
-        android:id="@+id/progressAccurasy"
-        style="?android:attr/progressBarStyleHorizontal"
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:progressDrawable="@drawable/doctor_profile_progress_bar"
-        android:progressTint="@color/progressBarColor" />
+        app:cardCornerRadius="15dp">
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/progressAccurasy"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/secondaryBlue"
+            app:indicatorColor="@color/progressBarColor"
+            app:trackCornerRadius="15dp"
+            app:trackThickness="16dp" />
+    </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.textview.MaterialTextView
         android:layout_width="wrap_content"
@@ -84,13 +111,20 @@
         android:textColor="@color/basicGrey"
         android:textSize="12sp" />
 
-    <ProgressBar
-        android:id="@+id/progressPunctualnost"
-        style="?android:attr/progressBarStyleHorizontal"
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:progressDrawable="@drawable/doctor_profile_progress_bar"
-        android:progressTint="@color/progressBarColor" />
+        app:cardCornerRadius="15dp">
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/progressPunctuality"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/secondaryBlue"
+            app:indicatorColor="@color/progressBarColor"
+            app:trackCornerRadius="15dp"
+            app:trackThickness="16dp" />
+    </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/writeFeedbackButton"
